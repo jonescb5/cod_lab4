@@ -1,13 +1,13 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: Christopher Jones
+-- Engineer: 
 -- 
--- Create Date: 11/01/2020 07:31:06 PM
+-- Create Date: 11/02/2020 04:31:20 PM
 -- Design Name: 
--- Module Name: sra_16 - Structural
+-- Module Name: ALU_16_testbench - Behavioral
 -- Project Name: 
--- Target Devices: Digilent Basys3
--- Tool Versions: 2019.2
+-- Target Devices: 
+-- Tool Versions: 
 -- Description: 
 -- 
 -- Dependencies: 
@@ -31,18 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity sra_16 is
-	Port (	a_bus   :   in std_logic_vector(15 downto 0);
-			c_bus   :   out std_logic_vector(15 downto 0) );
-end sra_16;
+entity ALU_16_testbench is
+--  Port ( );
+end ALU_16_testbench;
 
-architecture Structural of sra_16 is
+architecture Behavioral of ALU_16_testbench is
 
 begin
-	GEN_SRA :	for n in 14 downto 0 generate
-				c_bus(n) <= a_bus(n+1);
-	end generate GEN_SRA;
 
-	c_bus(15) <= a_bus(15);
 
-end Structural;
+end Behavioral;

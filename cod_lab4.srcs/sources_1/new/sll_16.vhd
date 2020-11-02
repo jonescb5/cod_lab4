@@ -33,14 +33,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity sll_16 is
 	Port (	a_bus   :   in std_logic_vector(15 downto 0);
-			c_bus   :   in std_logic_vector(15 downto 0) );
+			c_bus   :   out std_logic_vector(15 downto 0) );
 end sll_16;
 
 architecture Structural of sll_16 is
 
 begin
 	GEN_SLL :	for n in 15 downto 1 generate
-				c_bus(n) <= not a_bus(n-1);
+				c_bus(n) <= a_bus(n-1);
 	end generate GEN_SLL;
 
 	c_bus(0) <= '0';

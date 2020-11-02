@@ -36,7 +36,7 @@ entity adder_subtractor_16 is
             b_bus   : in std_logic_vector(15 downto 0);
             sel     : in std_logic;
             cout    : out std_logic;
-            ovr     : out std_logic;
+            overflow	: out std_logic;
             d_bus   : out std_logic_vector(15 downto 0) );
 end adder_subtractor_16;
 
@@ -46,8 +46,8 @@ signal b_bus_mod : std_logic_vector(15 downto 0);
 begin
 	-- generate the xor switch for the input of the adder
 	-- this creates a selectable parrallel adder-subtractor
-	GEN_MOD : for n in 0 to 15 generate
-		b_bus_mod(n) <= b_bus xor sel;
+	GEN_MOD : for n in 15 downto 0 generate
+		b_bus_mod(n) <= b_bus(n) xor sel;
 	end generate GEN_MOD;
 	
 	--now use the 16 bit adder with sel as the cin
@@ -56,7 +56,7 @@ begin
 									b_bus => b_bus_mod,
 									cin => sel,
 									cout => cout,
-									ovr => ovr,
+									overflow => overflow,
 									s_bus => d_bus
 									);
 

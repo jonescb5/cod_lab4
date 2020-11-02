@@ -37,7 +37,7 @@ entity adder_16 is
             b_bus   : in std_logic_vector(15 downto 0);
             cin     : in std_logic;
             cout    : out std_logic;
-            ovr     : out std_logic;
+            overflow     : out std_logic;
             s_bus   : out std_logic_vector(15 downto 0)
             );
 end adder_16;
@@ -79,7 +79,7 @@ begin
 	ADDER_15_B : ENTITY xil_defaultlib.full_adder(Structural)
 	PORT MAP(a_bus(15), b_bus(15), carry(14), s_bus(15), carry(15));
 
-	ovr <= carry(14) xor carry(15);
+	overflow <= carry(14) xor carry(15);
 	cout <= carry(15);
 	
 end Structural;

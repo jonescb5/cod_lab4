@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity not_16 is
 Port (	a_bus   :   in std_logic_vector(15 downto 0);
-		c_bus   :   in std_logic_vector(15 downto 0) );
+		c_bus   :   out std_logic_vector(15 downto 0) );
 end not_16;
 
 architecture Structural of not_16 is
