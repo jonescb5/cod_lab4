@@ -1,6 +1,6 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot adder_16_behav xil_defaultlib.adder_16 -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot zero_check_16_testbench_behav xil_defaultlib.zero_check_16_testbench -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,6 +10,6 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture structural of entity xil_defaultlib.full_adder [full_adder_default]
-Compiling architecture structural of entity xil_defaultlib.adder_16
-Built simulation snapshot adder_16_behav
+Compiling architecture structural of entity xil_defaultlib.zero_check_16 [zero_check_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.zero_check_16_testbench
+Built simulation snapshot zero_check_16_testbench_behav
