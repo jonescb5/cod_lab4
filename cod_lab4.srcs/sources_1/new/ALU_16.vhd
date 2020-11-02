@@ -69,52 +69,52 @@ begin
 									d_bus		=>	res_add_sub_block
 									);
 									
-	AND_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	AND_BLOCK				:	ENTITY xil_defaultlib.and_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									b_bus		=>	B,
 									c_bus		=>	res_and_block
 									);
 									
-	NOT_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	NOT_BLOCK				:	ENTITY xil_defaultlib.not_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									c_bus		=>	res_not_block
 									);
 									
-	OR_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	OR_BLOCK				:	ENTITY xil_defaultlib.or_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									b_bus		=>	B,
 									c_bus		=>	res_or_block
 									);
 									
-	XOR_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	XOR_BLOCK				:	ENTITY xil_defaultlib.xor_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									b_bus		=>	B,
 									c_bus		=>	res_xor_block
 									);
 									
-	SLL_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	SLL_BLOCK				:	ENTITY xil_defaultlib.sll_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									c_bus		=>	res_sll_block
 									);
 									
-	SRL_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	SRL_BLOCK				:	ENTITY xil_defaultlib.srl_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									c_bus		=>	res_srl_block
 									);
 									
-	SRA_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	SRA_BLOCK				:	ENTITY xil_defaultlib.sra_16(Structural)
 							PORT MAP(
 									a_bus		=>	A,
 									c_bus		=>	res_sra_block
 									);	
 									
-	MUX_BLOCK				:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	MUX_BLOCK				:	ENTITY xil_defaultlib.Mux8to1_16(Behavioral)
 							PORT MAP(
 									a			=>	res_add_sub_block,
 									b			=>	res_and_block,
@@ -128,7 +128,7 @@ begin
 									pass		=>	res_mux_block
 									);		
 									
-	ZERO_CHECK_BLOCK		:	ENTITY xil_defaultlib.adder_subtractor_16(Structural)
+	ZERO_CHECK_BLOCK		:	ENTITY xil_defaultlib.zero_check_16(Structural)
 							PORT MAP(
 									input 		=>	res_mux_block,
 									output		=>	zero
