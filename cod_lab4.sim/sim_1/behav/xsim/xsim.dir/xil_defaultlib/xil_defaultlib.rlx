@@ -2,7 +2,7 @@
 2019.2
 Nov  6 2019
 21:42:20
-/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd,1604354420,vhdl,,,,alu_16_testbench,,,,,,,,
+/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd,1604360340,vhdl,,,,alu_16_testbench,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/zero_check_16_testbench.vhd,1604281649,vhdl,,,,zero_check_16_testbench,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,1604354611,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd,,,alu_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux8to1_16.vhd,1604348351,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,mux8to1_16,,,,,,,,

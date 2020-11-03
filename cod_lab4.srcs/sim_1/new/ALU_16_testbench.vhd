@@ -62,72 +62,89 @@ begin
         						--Adder busA Test Values
             A_stimulus 		<=	"0000010100000101" after 5ns, 	-- 1285
                      			"0000010100000101" after 10ns, 	-- 1285
-                     			"0000010100000101" after 15ns, 	-- 
-                     			"0000010100000101" after 20ns, 	-- 
+                     			"0111111111111111" after 15ns, 	-- 32767
+                     			"1111110100000101" after 20ns, 	-- -763
                     
                     			--Subtractor busA Test Values
                     			"0000010100000101" after 25ns,	-- 1285
                     			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                   				"0111111111111111" after 35ns, 	-- 32767
+                    			"0000010100000101" after 40ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--AND busA Test Values
+                    			"1010101010101010" after 45ns,	-- 1285
+                    			"1010101010101010" after 50ns, 	-- 1285
+                   				"1111111111111111" after 55ns, 	-- 
+                    			"1111110100000101" after 60ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--NOT busA Test Values
+                    			"0000010100000101" after 65ns,	-- 1285
+                    			"0000010100000101" after 70ns, 	-- 1285
+                   				"0000010100000101" after 75ns, 	-- 
+                    			"0000010100000101" after 80ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--OR busA Test Values
+                    			"1010101010101010" after 85ns,	-- 1285
+                    			"1111111111111111" after 90ns, 	-- 1285
+                   				"1111110100000101" after 95ns, 	-- 
+                    			"1101110011110001" after 100ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--XOR busA Test Values
+                    			"1010101010101010" after 105ns,	-- 1285
+                    			"1010101010101010" after 110ns, 	-- 1285
+                   				"1111111111111111" after 115ns, 	-- 
+                    			"1111111111111111" after 120ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--SLL busA Test Values
+                    			"1111111111111111" after 125ns,	-- 1285
+                    			"0111111111111111" after 130ns, 	-- 1285
+                   				"1010101010101010" after 135ns, 	-- 
+                    			"0101010101010101" after 140ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--SRL busA Test Values
+                    			"1111111111111111" after 145ns,	-- 1285
+                    			"0111111111111111" after 150ns, 	-- 1285
+                   				"1010101010101010" after 155ns, 	-- 
+                    			"0101010101010101" after 160ns, 	-- 
                     			
-                    			                    			--Subtractor busA Test Values
-                    			"0000010100000101" after 25ns,	-- 1285
-                    			"0000010100000101" after 30ns, 	-- 1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                    			--SRA busA Test Values
+                    			"1111111111111111" after 165ns,	-- 1285
+                    			"0111111111111111" after 170ns, 	-- 1285
+                   				"1010101010101010" after 175ns, 	-- 
+                    			"0101010101010101" after 180ns; 	-- 
+         
+         
          
         						--Adder busA Test Values
             B_stimulus 		<=	"0000010100000101" after 5ns, 	-- 1285
                      			"1111101011111011" after 10ns, 	-- -1285
-                     			"0000010100000101" after 15ns, 	-- 
-                     			"0000010100000101" after 20ns, 	-- 
+                     			"0000000000000001" after 15ns, 	-- 1
+                     			"0000000000000000" after 20ns, 	-- 0
                     
                     			--Subtractor busA Test Values
                     			"0000010100000101" after 25ns,	-- 1285
                     			"1111101011111011" after 30ns, 	-- -1285
-                   				"0000010100000101" after 35ns, 	-- 
-                    			"0000010100000101" after 40ns; 	-- 
+                   				"0000000000000001" after 35ns, 	-- 1
+                    			"1111111111111111" after 40ns, 	-- -1
  
-                    
+                    			--AND busA Test Values
+                    			"1010101010101010" after 45ns,	-- 1285
+                    			"0101010101010101" after 50ns, 	-- 1285
+                   				"1010101010101010" after 55ns, 	-- 
+                    			"1000000000000000" after 60ns, 	--                     
 
-                    
+                    			--OR busA Test Values
+                    			"1010101010101010" after 85ns,	-- 1285
+                    			"0101010101010101" after 90ns, 	-- 1285
+                   				"1010101010101010" after 95ns, 	-- 
+                    			"1000000000000000" after 100ns, 	-- 
+                    			
+                    			--XOR busA Test Values
+                    			"1010101010101010" after 105ns,	-- 1285
+                    			"0101010101010101" after 110ns, 	-- 1285
+                   				"0101010101010101" after 115ns, 	-- 
+                    			"0000010100000101" after 120ns; 	-- 
+                  
                     
 		
             wait;
