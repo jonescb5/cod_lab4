@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ALU_16_testbench'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8_testbench'

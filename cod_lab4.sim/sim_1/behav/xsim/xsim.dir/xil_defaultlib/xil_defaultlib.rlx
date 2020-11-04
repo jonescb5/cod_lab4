@@ -3,8 +3,10 @@
 Nov  6 2019
 21:42:20
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd,1604360340,vhdl,,,,alu_16_testbench,,,,,,,,
+/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd,1604530575,vhdl,,,,registerfile_16by8_testbench,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/zero_check_16_testbench.vhd,1604281649,vhdl,,,,zero_check_16_testbench,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,1604354611,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd,,,alu_16,,,,,,,,
+/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16_controller.vhd,1604364195,vhdl,,,,alu_16_controller,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux8to1_16.vhd,1604348351,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,mux8to1_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/add_sub_16.vhd,1604348602,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/adder_subtractor_16.vhd,,,adder_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/adder_subtractor_16.vhd,1604352076,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,adder_subtractor_16,,,,,,,,
@@ -12,6 +14,7 @@ Nov  6 2019
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/full_adder.vhd,1604274521,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/add_sub_16.vhd,,,full_adder,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/not_16.vhd,1604352390,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,not_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/or_16.vhd,1604277647,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,or_16,,,,,,,,
+/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd,1604524435,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd,,,registerfile_16by8,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sll_16.vhd,1604352423,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,sll_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sra_16.vhd,1604352321,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,sra_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/srl_16.vhd,1604352565,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd,,,srl_16,,,,,,,,
