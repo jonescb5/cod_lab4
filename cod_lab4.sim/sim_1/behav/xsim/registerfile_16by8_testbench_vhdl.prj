@@ -15,9 +15,18 @@ vhdl xil_defaultlib  \
 "../../../../cod_lab4.srcs/sources_1/new/ALU_16.vhd" \
 "../../../../cod_lab4.srcs/sources_1/new/ALU_16_controller.vhd" \
 "../../../../cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/control_10imm.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/mux3to1_3.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/instruction_mem_16.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/mux2to1_16.vhd" \
+"../../../../cod_lab4.srcs/sources_1/imports/cod_lab4/mem_16.vhd" \
+"../../../../cod_lab4.srcs/sources_1/imports/cod_lab4/sign_extentor.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/data_path.vhd" \
+"../../../../cod_lab4.srcs/sources_1/new/mux2to1_3.vhd" \
 "../../../../cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd" \
 "../../../../cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd" \
 "../../../../cod_lab4.srcs/sim_1/new/zero_check_16_testbench.vhd" \
+"../../../../cod_lab4.srcs/sim_1/new/data_path_testbench.vhd" \
 
 # Do not sort compile order
 nosort

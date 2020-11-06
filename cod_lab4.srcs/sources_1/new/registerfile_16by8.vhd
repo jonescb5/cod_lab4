@@ -74,7 +74,7 @@ begin
 			end if;
 		end process write_proc;	
 				
-	read_a_proc : process(reg_addr_a)
+	read_a_proc : process(clk)
 		begin
 					case reg_addr_a is
 						when "001" =>
@@ -97,7 +97,7 @@ begin
 					
 		end process read_a_proc;
 		
-	read_b_proc : process(reg_addr_b)
+	read_b_proc : process(clk)
 		begin
 					case reg_addr_b is
 						when "001" =>
