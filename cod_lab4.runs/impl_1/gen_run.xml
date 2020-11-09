@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1604364350">
-  <File Type="ROUTE-PWR-SUM" Name="ALU_16_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ALU_16_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="ALU_16_route_status.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ALU_16_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ALU_16_postroute_physopt_bb.dcp"/>
-  <File Type="RDI-RDI" Name="ALU_16.vdi"/>
-  <File Type="ROUTE-STATUS-PB" Name="ALU_16_route_status.pb"/>
-  <File Type="BG-BIT" Name="ALU_16.bit"/>
-  <File Type="RCFI_FILE" Name="ALU_16.rcfi"/>
-  <File Type="BG-DRC" Name="ALU_16.drc"/>
-  <File Type="NPI_FILE" Name="ALU_16.npi"/>
-  <File Type="BITSTR-LTX" Name="ALU_16.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="ALU_16.sysdef"/>
-  <File Type="BG-BGN" Name="ALU_16.bgn"/>
-  <File Type="RBD_FILE" Name="ALU_16.rbd"/>
-  <File Type="PDI-FILE" Name="ALU_16.pdi"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ALU_16_bus_skew_routed.rpt"/>
-  <File Type="BITSTR-MMI" Name="ALU_16.mmi"/>
+  <File Type="BITSTR-NKY" Name="ALU_16.nky"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ALU_16_timing_summary_routed.rpt"/>
+  <File Type="BG-BIN" Name="ALU_16.bin"/>
+  <File Type="ROUTE-PWR" Name="ALU_16_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ALU_16_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="ALU_16_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="ALU_16_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="ALU_16_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ALU_16_routed_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ALU_16_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DCP" Name="ALU_16_routed.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ALU_16_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ALU_16_routed_error.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="ALU_16_physopt.dcp"/>
+  <File Type="OPT-DCP" Name="ALU_16_opt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ALU_16_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="ALU_16_reports.tcl"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ALU_16_timing_summary_routed.rpx"/>
+  <File Type="RNPI_FILE" Name="ALU_16.rnpi"/>
+  <File Type="BITSTR-RBT" Name="ALU_16.rbt"/>
   <File Type="ROUTE-CLK" Name="ALU_16_clock_utilization_routed.rpt"/>
   <File Type="BITSTR-BMM" Name="ALU_16_bd.bmm"/>
+  <File Type="RBD_FILE" Name="ALU_16.rbd"/>
+  <File Type="BG-BGN" Name="ALU_16.bgn"/>
+  <File Type="PDI-FILE" Name="ALU_16.pdi"/>
+  <File Type="BITSTR-LTX" Name="ALU_16.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ALU_16.sysdef"/>
+  <File Type="NPI_FILE" Name="ALU_16.npi"/>
+  <File Type="BG-DRC" Name="ALU_16.drc"/>
+  <File Type="ROUTE-STATUS-PB" Name="ALU_16_route_status.pb"/>
+  <File Type="RCFI_FILE" Name="ALU_16.rcfi"/>
+  <File Type="BG-BIT" Name="ALU_16.bit"/>
+  <File Type="ROUTE-PWR-RPX" Name="ALU_16_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="ALU_16_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="ALU_16_route_status.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ALU_16_postroute_physopt.dcp"/>
+  <File Type="PA-DCP" Name="ALU_16.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ALU_16_postroute_physopt_bb.dcp"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="ALU_16_postplace_pwropt.dcp"/>
+  <File Type="RDI-RDI" Name="ALU_16.vdi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ALU_16_bus_skew_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="ALU_16.mmi"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="ALU_16_incremental_reuse_pre_placed.rpt"/>
   <File Type="PLACE-CTRL" Name="ALU_16_control_sets_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="ALU_16_utilization_placed.pb"/>
@@ -33,30 +54,9 @@
   <File Type="BITSTR-MSK" Name="ALU_16.msk"/>
   <File Type="CFI_FILE" Name="ALU_16.cfi"/>
   <File Type="ROUTE-TIMING-PB" Name="ALU_16_timing_summary_routed.pb"/>
-  <File Type="PLACE-DCP" Name="ALU_16_placed.dcp"/>
-  <File Type="PA-DCP" Name="ALU_16.dcp"/>
-  <File Type="PA-TCL" Name="ALU_16.tcl"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="ALU_16_bus_skew_routed.pb"/>
-  <File Type="BITSTR-RBT" Name="ALU_16.rbt"/>
-  <File Type="RNPI_FILE" Name="ALU_16.rnpi"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ALU_16_timing_summary_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="ALU_16_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ALU_16_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="ALU_16_opt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="ALU_16_physopt.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ALU_16_routed_error.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ALU_16_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DCP" Name="ALU_16_routed.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ALU_16_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ALU_16_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="ALU_16_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ALU_16_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="ALU_16_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ALU_16_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-PWR" Name="ALU_16_power_routed.rpt"/>
-  <File Type="BG-BIN" Name="ALU_16.bin"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ALU_16_timing_summary_routed.rpt"/>
-  <File Type="BITSTR-NKY" Name="ALU_16.nky"/>
+  <File Type="PA-TCL" Name="ALU_16.tcl"/>
+  <File Type="PLACE-DCP" Name="ALU_16_placed.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/full_adder.vhd">

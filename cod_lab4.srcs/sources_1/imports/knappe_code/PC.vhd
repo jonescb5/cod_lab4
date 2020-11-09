@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity PC is
     Port ( Clk      : in STD_LOGIC;
-           PC_in    : in STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
+           PC_in    : in STD_LOGIC_VECTOR (15 downto 0);
            PC_out   : out STD_LOGIC_VECTOR (15 downto 0)
            );
 end PC;

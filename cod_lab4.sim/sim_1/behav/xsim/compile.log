@@ -1,0 +1,56 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'full_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/add_sub_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'adder_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/adder_subtractor_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'adder_subtractor_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/and_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'and_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/not_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'not_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/or_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'or_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/xor_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xor_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sll_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sll_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/srl_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'srl_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sra_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sra_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux8to1_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Mux8to1_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/zero_check_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zero_check_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux2to1_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux2to1_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/cod_lab4/mem_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mem_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/cod_lab4/sign_extentor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sign_extentor'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'data_path'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/instruction_mem_16.vhd" into library knappe_lib
+INFO: [VRFC 10-3107] analyzing entity 'instruction_mem_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/PC_adder.vhd" into library knappe_lib
+INFO: [VRFC 10-3107] analyzing entity 'PC_adder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/PC_mux.vhd" into library knappe_lib
+INFO: [VRFC 10-3107] analyzing entity 'PC_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/PC.vhd" into library knappe_lib
+INFO: [VRFC 10-3107] analyzing entity 'PC'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/PC_topleve.vhd" into library knappe_lib
+INFO: [VRFC 10-3107] analyzing entity 'PC_topleve'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8_testbench'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU_16_testbench'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/zero_check_16_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zero_check_16_testbench'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/data_path_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'data_path_testbench'

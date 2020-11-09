@@ -38,7 +38,7 @@ end data_path_testbench;
 
 architecture Behavioral of data_path_testbench is
 signal SIM_instruction	: std_logic_vector(15 downto 0);
-signal SIM_clk_in			:  std_logic:='0';
+signal SIM_clk_in			:  std_logic:='1';
 	
 signal SIM_RegDst			:  std_logic:= '0';
 signal SIM_MemRead			:  std_logic:='0';
@@ -56,6 +56,8 @@ signal SIM_Overflow			:  std_logic;
 signal SIM_Carry_Out		:  std_logic;
 
 constant clock_period : time := 1 ns;
+
+
 begin
 
 

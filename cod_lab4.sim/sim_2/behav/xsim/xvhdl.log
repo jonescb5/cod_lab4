@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_2/imports/knappe_code/PC_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PC_testbench'

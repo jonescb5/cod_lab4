@@ -1,0 +1,21 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L knappe_lib -L secureip --snapshot PC_testbench_behav xil_defaultlib.PC_testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity knappe_lib.instruction_mem_16 [instruction_mem_16_default]
+Compiling architecture behavioral of entity knappe_lib.PC [pc_default]
+Compiling architecture behavioral of entity knappe_lib.PC_mux [pc_mux_default]
+Compiling architecture behavioral of entity knappe_lib.PC_adder [pc_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux2to1_16 [mux2to1_16_default]
+Compiling architecture behavioral of entity knappe_lib.PC_topleve [pc_topleve_default]
+Compiling architecture behavioral of entity xil_defaultlib.pc_testbench
+Built simulation snapshot PC_testbench_behav
