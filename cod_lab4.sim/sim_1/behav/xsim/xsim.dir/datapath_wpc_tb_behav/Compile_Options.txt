@@ -1,0 +1,1 @@
+-wto "02b5322fde53492e8ead4750ed1019bb" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "knappe_lib" -L "secureip" --snapshot "datapath_wpc_tb_behav" "xil_defaultlib.datapath_wpc_tb" -log "elaborate.log" 

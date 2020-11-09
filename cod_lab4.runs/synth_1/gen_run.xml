@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1604364237">
-  <File Type="RDS-UTIL-PB" Name="ALU_16_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="ALU_16_utilization_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ALU_16.vds"/>
-  <File Type="RDS-DCP" Name="ALU_16.dcp"/>
-  <File Type="PA-TCL" Name="ALU_16.tcl"/>
-  <File Type="REPORTS-TCL" Name="ALU_16_reports.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1604965997">
+  <File Type="VDS-TIMING-PB" Name="data_path_wpc_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="data_path_wpc_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="data_path_wpc.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="data_path_wpc_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="data_path_wpc_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="data_path_wpc_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="data_path_wpc.vds"/>
+  <File Type="REPORTS-TCL" Name="data_path_wpc_reports.tcl"/>
+  <File Type="PA-TCL" Name="data_path_wpc.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/full_adder.vhd">
@@ -86,17 +89,100 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/ALU_16_controller.vhd">
+    <File Path="$PSRCDIR/sources_1/new/mux2to1_3.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/registerfile_16by8.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux2to1_16.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cod_lab4/mem_16.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mem_16.vhd"/>
+        <Attr Name="ImportTime" Val="1604604791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cod_lab4/sign_extentor.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sign_extentor.vhd"/>
+        <Attr Name="ImportTime" Val="1604604791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/data_path.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/knappe_code/instruction_mem_16.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="knappe_lib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/knappe_code/instruction_mem_16.vhd"/>
+        <Attr Name="ImportTime" Val="1604948453"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/knappe_code/PC_adder.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="knappe_lib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/knappe_code/PC_adder.vhd"/>
+        <Attr Name="ImportTime" Val="1604633783"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/knappe_code/PC_mux.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="knappe_lib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/knappe_code/PC_mux.vhd"/>
+        <Attr Name="ImportTime" Val="1604633765"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/knappe_code/PC.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="knappe_lib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/knappe_code/PC.vhd"/>
+        <Attr Name="ImportTime" Val="1604633908"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/knappe_code/PC_topleve.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="knappe_lib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/knappe_code/PC_topleve.vhd"/>
+        <Attr Name="ImportTime" Val="1604633738"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/data_path_wpc.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ALU_16"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="data_path_wpc"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -112,7 +198,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

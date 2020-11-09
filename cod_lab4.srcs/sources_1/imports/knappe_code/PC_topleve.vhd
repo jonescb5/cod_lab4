@@ -39,7 +39,9 @@ entity PC_topleve is
            branch_pc : in STD_LOGIC_Vector(15 downto 0);
            Instruction : out STD_LOGIC_VECTOR(15 downto 0);
            pc_init : in STD_LOGIC;
-           set_pc : in STD_LOGIC_Vector(15 downto 0)
+           set_pc : in STD_LOGIC_Vector(15 downto 0);
+           
+           pc_pass : out STD_LOGIC_Vector(15 downto 0)
            );
 end PC_topleve;
 
@@ -52,6 +54,7 @@ signal pc_to_pc : std_logic_vector(15 downto 0);
      
 begin
 
+pc_pass <= pc_current;
 
 Instruction_memory : ENTITY knappe_lib.instruction_mem_16(Behavioral)
     port map(

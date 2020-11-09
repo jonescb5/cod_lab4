@@ -1,6 +1,6 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L knappe_lib -L secureip --snapshot data_path_testbench_behav xil_defaultlib.data_path_testbench -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L knappe_lib -L secureip --snapshot datapath_wpc_tb_behav xil_defaultlib.datapath_wpc_tb -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -30,5 +30,11 @@ Compiling architecture behavioral of entity xil_defaultlib.mux2to1_16 [mux2to1_1
 Compiling architecture behavioral of entity xil_defaultlib.sign_extentor [sign_extentor_default]
 Compiling architecture behavioral of entity xil_defaultlib.mux2to1_3 [mux2to1_3_default]
 Compiling architecture structural of entity xil_defaultlib.data_path [data_path_default]
-Compiling architecture behavioral of entity xil_defaultlib.data_path_testbench
-Built simulation snapshot data_path_testbench_behav
+Compiling architecture behavioral of entity knappe_lib.instruction_mem_16 [instruction_mem_16_default]
+Compiling architecture behavioral of entity knappe_lib.PC [pc_default]
+Compiling architecture behavioral of entity knappe_lib.PC_mux [pc_mux_default]
+Compiling architecture behavioral of entity knappe_lib.PC_adder [pc_adder_default]
+Compiling architecture behavioral of entity knappe_lib.PC_topleve [pc_topleve_default]
+Compiling architecture structural of entity xil_defaultlib.data_path_wpc [data_path_wpc_default]
+Compiling architecture behavioral of entity xil_defaultlib.datapath_wpc_tb
+Built simulation snapshot datapath_wpc_tb_behav

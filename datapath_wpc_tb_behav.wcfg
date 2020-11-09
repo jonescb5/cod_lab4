@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="datapath_wpc_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="datapath_wpc_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="10494fs"></ZoomEndTime>
+      <Cursor1Time time="70000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="223"></NameColumnWidth>
+      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject type="other" fp_name="/datapath_wpc_tb/i">
+      <obj_property name="ElementShortName">i</obj_property>
+      <obj_property name="ObjectShortName">i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_clk_in">
+      <obj_property name="ElementShortName">SIM_clk_in</obj_property>
+      <obj_property name="ObjectShortName">SIM_clk_in</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group160">
+      <obj_property name="label">SIM_INPUTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/SIM_set_pc">
+         <obj_property name="ElementShortName">SIM_set_pc[15:0]</obj_property>
+         <obj_property name="ObjectShortName">SIM_set_pc[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_pc_init">
+         <obj_property name="ElementShortName">SIM_pc_init</obj_property>
+         <obj_property name="ObjectShortName">SIM_pc_init</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_RegDst">
+         <obj_property name="ElementShortName">SIM_RegDst</obj_property>
+         <obj_property name="ObjectShortName">SIM_RegDst</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_MemRead">
+         <obj_property name="ElementShortName">SIM_MemRead</obj_property>
+         <obj_property name="ObjectShortName">SIM_MemRead</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_ALUsrc">
+         <obj_property name="ElementShortName">SIM_ALUsrc</obj_property>
+         <obj_property name="ObjectShortName">SIM_ALUsrc</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_RegWriteEn">
+         <obj_property name="ElementShortName">SIM_RegWriteEn</obj_property>
+         <obj_property name="ObjectShortName">SIM_RegWriteEn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_MemtoReg">
+         <obj_property name="ElementShortName">SIM_MemtoReg</obj_property>
+         <obj_property name="ObjectShortName">SIM_MemtoReg</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/SIM_ALUctr">
+         <obj_property name="ElementShortName">SIM_ALUctr[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SIM_ALUctr[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_MemWrite">
+         <obj_property name="ElementShortName">SIM_MemWrite</obj_property>
+         <obj_property name="ObjectShortName">SIM_MemWrite</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_Branch">
+         <obj_property name="ElementShortName">SIM_Branch</obj_property>
+         <obj_property name="ObjectShortName">SIM_Branch</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group161">
+      <obj_property name="label">SIM_OUTPUTS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/SIM_OpCode">
+         <obj_property name="ElementShortName">SIM_OpCode[2:0]</obj_property>
+         <obj_property name="ObjectShortName">SIM_OpCode[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/SIM_Func">
+         <obj_property name="ElementShortName">SIM_Func[3:0]</obj_property>
+         <obj_property name="ObjectShortName">SIM_Func[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_Overflow">
+         <obj_property name="ElementShortName">SIM_Overflow</obj_property>
+         <obj_property name="ObjectShortName">SIM_Overflow</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/SIM_Carry_Out">
+         <obj_property name="ElementShortName">SIM_Carry_Out</obj_property>
+         <obj_property name="ObjectShortName">SIM_Carry_Out</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group197">
+      <obj_property name="label">REGISTER_FILE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_addr_a">
+         <obj_property name="ElementShortName">reg_addr_a[2:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_addr_a[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_addr_b">
+         <obj_property name="ElementShortName">reg_addr_b[2:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_addr_b[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_addr_c">
+         <obj_property name="ElementShortName">reg_addr_c[2:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_addr_c[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_data_a">
+         <obj_property name="ElementShortName">reg_data_a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_a[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_data_b">
+         <obj_property name="ElementShortName">reg_data_b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_b[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_data_write">
+         <obj_property name="ElementShortName">reg_data_write[15:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_data_write[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_write_enable">
+         <obj_property name="ElementShortName">reg_write_enable</obj_property>
+         <obj_property name="ObjectShortName">reg_write_enable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/DATA_PATH/REGISTER_FILE/reg_block">
+         <obj_property name="ElementShortName">reg_block[0:7][15:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_block[0:7][15:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/PC_LOOP/Instruction_memory/instruction">
+      <obj_property name="ElementShortName">instruction[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/datapath_wpc_tb/DUT/PC_LOOP/Instruction_memory/pc">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+</wave_config>

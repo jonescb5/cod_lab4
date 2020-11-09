@@ -33,8 +33,9 @@ library knappe_lib;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity data_path_wpc is
-  Port (	clk				:	in std_logic;
+entity data_path_wpc is 
+port (	
+			clk				:	in std_logic;
   			pc_init 		: 	in STD_LOGIC;
            	set_pc 			: 	in STD_LOGIC_Vector(15 downto 0);
 			RegDst			: 	in std_logic;
@@ -48,7 +49,8 @@ entity data_path_wpc is
 			OpCode			: 	out std_logic_vector(2 downto 0);
 			Func			: 	out std_logic_vector(3 downto 0);
 			Overflow		: out std_logic;
-			Carry_Out		: out std_logic
+			Carry_Out		: out std_logic;
+			pc_pass : out std_logic_vector(15 downto 0)
    );
 end data_path_wpc;
 
@@ -88,7 +90,8 @@ begin
 				instruction		=>	instruction_sig,
 				branch_pc		=>	seimm16_sig,
 				pc_init			=>	pc_init,
-				set_pc			=>	set_pc
+				set_pc			=>	set_pc,
+				pc_pass			=>	pc_pass
 				);
 	
 end Structural;
