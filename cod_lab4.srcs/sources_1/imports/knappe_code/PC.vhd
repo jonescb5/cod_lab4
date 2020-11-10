@@ -15,10 +15,8 @@ begin
     process(clk)
     begin
         if (rising_edge(clk)) then 
-            PC_out <= PC_in_hold;
-        else 
-            pc_in_hold <= pc_in; 
+            PC_out <= PC_in_hold; 
         end if; 
-        
+        pc_in_hold <= pc_in; 
     end process;
 end Behavioral;

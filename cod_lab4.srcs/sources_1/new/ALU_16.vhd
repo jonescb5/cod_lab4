@@ -116,14 +116,14 @@ begin
 									
 	MUX_BLOCK				:	ENTITY xil_defaultlib.Mux8to1_16(Behavioral)
 							PORT MAP(
-									a			=>	res_add_sub_block,
-									b			=>	res_and_block,
-									c			=>	res_not_block,
-									d			=>	res_or_block,
-									e			=>	res_xor_block,
-									f			=>	res_sll_block,
-									g			=>	res_srl_block,
-									h			=>	res_sra_block,
+									a			=>	res_add_sub_block,	--000
+									b			=>	res_and_block,		--001
+									c			=>	res_not_block,		--010
+									d			=>	res_or_block,		--011
+									e			=>	res_xor_block,		--100
+									f			=>	res_sll_block,		--101
+									g			=>	res_srl_block,		--110
+									h			=>	res_sra_block,		--111
 									sel			=>	ctr(2 downto 0),
 									pass		=>	res_mux_block
 									);		

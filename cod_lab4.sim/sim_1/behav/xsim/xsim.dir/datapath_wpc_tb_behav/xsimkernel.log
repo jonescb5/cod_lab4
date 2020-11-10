@@ -1,4 +1,4 @@
-Running: xsim.dir/datapath_wpc_tb_behav/xsimk -simmode gui -wdb datapath_wpc_tb_behav.wdb -simrunnum 0 -socket 45715
+Running: xsim.dir/datapath_wpc_tb_behav/xsimk -simmode gui -wdb datapath_wpc_tb_behav.wdb -simrunnum 0 -socket 45035
 Design successfully loaded
 Design Loading Memory Usage: 33656 KB (Peak: 33656 KB)
 Design Loading CPU Usage: 10 ms
