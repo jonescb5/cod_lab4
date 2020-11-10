@@ -50,6 +50,9 @@ read_vhdl -library xil_defaultlib {
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/cod_lab4/sign_extentor.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path_wpc.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_4.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/control_unit.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/processor_toplevel.vhd
 }
 read_vhdl -library knappe_lib {
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/instruction_mem_16.vhd
@@ -69,12 +72,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top data_path_wpc -part xc7a35tcpg236-1
+synth_design -top processor_toplevel -part xc7a35tcpg236-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef data_path_wpc.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file data_path_wpc_utilization_synth.rpt -pb data_path_wpc_utilization_synth.pb"
+write_checkpoint -force -noxdef processor_toplevel.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file processor_toplevel_utilization_synth.rpt -pb processor_toplevel_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
