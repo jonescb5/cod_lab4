@@ -51,6 +51,8 @@ entity data_path is
 			Zero			: out std_logic;
 			Overflow		: out std_logic;
 			Carry_Out		: out std_logic
+			
+			--RegRst			: in std_logic
 
 			);
 end data_path;
@@ -85,6 +87,8 @@ signal rd_addr_sig : std_logic_vector(2 downto 0);
 signal func_sig : std_logic_vector(3 downto 0);
 signal imm7_sig : std_logic_vector(6 downto 0);
 
+
+
 begin
 	instruction_sig <= instruction_in;
 	OpCode <= instruction_sig(15 downto 13);
@@ -116,6 +120,7 @@ begin
 				reg_data_b		=>	reg_data_b_sig,
 				reg_data_write	=>	reg_data_write_sig,
 				reg_write_enable=>	RegWriteEn
+				--reg_reset		=> 	RegRst
 				);
 				
 				reg_addr_a_sig <= rs_addr_sig;

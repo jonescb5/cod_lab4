@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 4
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -69,6 +70,9 @@ read_vhdl -library knappe_lib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc
+set_property used_in_implementation false [get_files /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/constrs_1/imports/digilent-xdc-master/Basys-3-Master.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

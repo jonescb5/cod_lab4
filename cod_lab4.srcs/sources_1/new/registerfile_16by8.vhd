@@ -40,6 +40,7 @@ entity registerfile_16by8 is
 			reg_data_b		:	out std_logic_vector(15 downto 0);
 			reg_data_write	:	in std_logic_vector(15 downto 0);
 			reg_write_enable:	in std_logic
+			--reg_reset		:	in std_logic
 			);
 end registerfile_16by8;
 
@@ -48,9 +49,24 @@ type registers is array ( 0 to 7) of std_logic_vector(15 downto 0);
 signal reg_block : registers;
 
 begin
-	write_proc : process(clk)
+
+
+--reset_proc : process(reg_reset)
+--	begin
+--		reg_block(0) <= "0000000000000000";
+--		reg_block(1) <= "0000000000000001";
+--		reg_block(2) <= "0000000000000010";	
+--		reg_block(3) <= "0000000000000011";
+--		reg_block(4) <= "0000000000000100";
+--		reg_block(5) <= "0000000000000101";
+--		reg_block(6) <= "0000000000000110";
+--		reg_block(7) <= "0000000000000111";
+		
+--end process reset_proc;
+--write_proc : process(clk)
+	write_proc : process(reg_addr_c)
 		begin
-			if (rising_edge(clk)) then
+			--if (rising_edge(clk)) then
 				if (reg_write_enable = '1') then
 					case reg_addr_c is
 						when "001" =>
@@ -71,7 +87,7 @@ begin
 							reg_block(0) <= "0000000000000000";
 					end case;
 				end if;
-			end if;
+			--end if;
 		end process write_proc;	
 				
 	read_a_proc : process(clk)

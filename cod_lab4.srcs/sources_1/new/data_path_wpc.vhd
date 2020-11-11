@@ -51,6 +51,7 @@ port (
 			Overflow		: out std_logic;
 			Carry_Out		: out std_logic;
 			pc_pass : out std_logic_vector(15 downto 0)
+			--RegRst			: in std_logic
    );
 end data_path_wpc;
 
@@ -80,6 +81,8 @@ begin
 				Zero			=> zero_flag_sig,
 				Overflow		=> Overflow,
 				Carry_Out		=> Carry_Out
+				
+				--RegRst			=> RegRst
 				);
 				
 	PC_LOOP : ENTITY knappe_lib.pc_topleve(Behavioral)

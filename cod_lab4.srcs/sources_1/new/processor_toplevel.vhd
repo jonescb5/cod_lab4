@@ -40,6 +40,8 @@ entity processor_toplevel is
 				Carry_Out	: out std_logic;
 				pc			: out std_logic_vector(15 downto 0)     ------- get rid of this
 				
+				--RegRst		: in std_logic
+				
 				 );
 end processor_toplevel;
 
@@ -81,6 +83,8 @@ DATA_PATH : entity xil_defaultlib.data_path_wpc(Structural)
 				Overflow		=>	Overflow_sig,
 				Carry_Out		=>	Carry_Out_sig,
 				pc_pass			=> 	pc 				---- get rid of this 
+				
+				--RegRst			=> RegRst
 	
 			);
 			
