@@ -37,12 +37,12 @@ entity data_path is
 			instruction_in	: in std_logic_vector(15 downto 0);
 			clk_in			: in std_logic;
 	
-			RegDst			: in std_logic;
+			RegDst			: in std_logic_vector(1 downto 0);
 			MemRead			: in std_logic;
 			ALUsrc			: in std_logic;
 			RegWriteEn		: in std_logic;
 			MemtoReg		: in std_logic;
-			ALUctr			: in std_logic_vector(3 downto 0);
+			ALUctr			: in std_logic_vector(4 downto 0);
 			MemWrite		: in std_logic;
 			
 			OpCode			: out std_logic_vector(2 downto 0);
@@ -85,23 +85,25 @@ signal rs_addr_sig : std_logic_vector(2 downto 0);
 signal rt_addr_sig : std_logic_vector(2 downto 0);
 signal rd_addr_sig : std_logic_vector(2 downto 0);
 signal func_sig : std_logic_vector(3 downto 0);
-signal imm7_sig : std_logic_vector(6 downto 0);
+signal imm6_sig : std_logic_vector(5 downto 0);
+signal imm9_sig : std_logic_vector(8 downto 0);
 
 
 
 begin
 	instruction_sig <= instruction_in;
-	OpCode <= instruction_sig(15 downto 13);
-	rs_addr_sig <= instruction_sig(12 downto 10);
-	rt_addr_sig <= instruction_sig(9 downto 7);
-	rd_addr_sig <= instruction_sig(6 downto 4);
-	Func <= instruction_sig(3 downto 0);
-	imm7_sig <= instruction_sig(6 downto 0);
+	OpCode <= instruction_sig(15 downto 12);
+	rs_addr_sig <= instruction_sig(11 downto 9);
+	rt_addr_sig <= instruction_sig(8 downto 6);
+	rd_addr_sig <= instruction_sig(5 downto 3);
+	Func <= instruction_sig(2 downto 0);
+	imm6_sig <= instruction_sig(5 downto 0);
+	imm9_sig <= instruction_sig(8 downto 0);
 	
 	
-	ALU : ENTITY xil_defaultlib.ALU_16(Structural)
+	ALU : ENTITY xil_defaultlib.ALU16_16(Structural)
 		port map(
-				A			=>	alu_input_a_sig,	
+				A			=>	reg_data_a_sig,	
 				B			=>	alu_input_b_sig,
 				ctr			=>	ALUctr,
 				result		=>	alu_output_sig,
@@ -113,8 +115,8 @@ begin
 	REGISTER_FILE : entity xil_defaultlib.registerfile_16by8(Behavioral)
 		port map(
 				clk				=>	clk_in,
-				reg_addr_a		=>	reg_addr_a_sig,
-				reg_addr_b		=>	reg_addr_b_sig,
+				reg_addr_a		=>	rs_addr_sig,
+				reg_addr_b		=>	rt_addr_sig,
 				reg_addr_c		=>	reg_addr_write_sig,
 				reg_data_a		=>	reg_data_a_sig,
 				reg_data_b		=>	reg_data_b_sig,
@@ -123,9 +125,6 @@ begin
 				--reg_reset		=> 	RegRst
 				);
 				
-				reg_addr_a_sig <= rs_addr_sig;
-				reg_addr_b_sig <= rt_addr_sig;
-				alu_input_a_sig <= reg_data_a_sig;
 				
 	DATA_MEMORY : entity xil_defaultlib.mem_16(Behavioral)
 		port map(
@@ -155,18 +154,19 @@ begin
 	
 	reg_data_write_sig <= memtoReg_data_sig;
 	
-	SIGN_EXTEND : entity xil_defaultlib.sign_extentor(Behavioral)
-		port map(
-				i_in 	=>	imm7_sig,
-				i_out	=> 	sign_extend_sig
-				);
+--	SIGN_EXTEND : entity xil_defaultlib.sign_extentor(Behavioral)
+--		port map(
+--				i_in 	=>	imm7_sig,
+--				i_out	=> 	sign_extend_sig
+--				);
 				
-				sign_extend_imm <= sign_extend_sig;
+--				sign_extend_imm <= sign_extend_sig;
 			
-	REG_WRITE_ADDR_SEL : entity xil_defaultlib.mux2to1_3(Behavioral)
+	REG_WRITE_ADDR_SEL : entity xil_defaultlib.mux3to1_3(Behavioral)
 		port map(
 				a		=> rt_addr_sig,
 				b		=> rd_addr_sig,
+				c		=> rs_addr_sig,
 				sel		=> RegDst,
 				pass	=> reg_addr_write_sig
 				);

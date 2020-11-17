@@ -49,12 +49,13 @@ architecture Structural of ALU_16 is
 
 signal res_add_sub_block : std_logic_vector(15 downto 0);
 signal res_and_block : std_logic_vector(15 downto 0);
-signal res_not_block : std_logic_vector(15 downto 0);
+--signal res_not_block : std_logic_vector(15 downto 0);
 signal res_or_block : std_logic_vector(15 downto 0);
 signal res_xor_block : std_logic_vector(15 downto 0);
 signal res_sll_block : std_logic_vector(15 downto 0);
 signal res_srl_block : std_logic_vector(15 downto 0);
 signal res_sra_block : std_logic_vector(15 downto 0);
+signal res_slt_block : std_logic_vector(15 downto 0);
 signal res_mux_block : std_logic_vector(15 downto 0);
 
 begin
@@ -76,11 +77,11 @@ begin
 									c_bus		=>	res_and_block
 									);
 									
-	NOT_BLOCK				:	ENTITY xil_defaultlib.not_16(Structural)
-							PORT MAP(
-									a_bus		=>	A,
-									c_bus		=>	res_not_block
-									);
+--	NOT_BLOCK				:	ENTITY xil_defaultlib.not_16(Structural)
+--							PORT MAP(
+--									a_bus		=>	A,
+--									c_bus		=>	res_not_block
+--									);
 									
 	OR_BLOCK				:	ENTITY xil_defaultlib.or_16(Structural)
 							PORT MAP(
@@ -112,13 +113,21 @@ begin
 							PORT MAP(
 									a_bus		=>	A,
 									c_bus		=>	res_sra_block
+									);
+									
+	SLT_BLOCK				:	ENTITY xil_defaultlib.slt_16(Behavioral)
+							PORT MAP(
+									a_bus		=>	A,
+									b_bus		=>	B,
+									c_bus		=>	res_slt_block
 									);	
 									
 	MUX_BLOCK				:	ENTITY xil_defaultlib.Mux8to1_16(Behavioral)
 							PORT MAP(
 									a			=>	res_add_sub_block,	--000
 									b			=>	res_and_block,		--001
-									c			=>	res_not_block,		--010
+									--c			=>	res_not_block,		--010
+									c			=>	res_slt_block,		--010
 									d			=>	res_or_block,		--011
 									e			=>	res_xor_block,		--100
 									f			=>	res_sll_block,		--101
