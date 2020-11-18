@@ -40,29 +40,24 @@ read_vhdl -library xil_defaultlib {
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sll_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/srl_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sra_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux8to1_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/zero_check_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_3.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/cod_lab4/mem_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/cod_lab4/sign_extentor.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path_wpc.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/mux2to1_4.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/control_unit.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/processor_toplevel.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/slt_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/srlb_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sllb_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sgt_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/seq_16.vhd
-  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/llb_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux16to1_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/llb_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/seq_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sgt_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sllb_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/srlb_16.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/slt_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/Mux3to1_3.vhd
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/dual_sign_extend.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path_wpc.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/control_unit.vhd
+  /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/processor_toplevel.vhd
 }
 read_vhdl -library knappe_lib {
   /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/imports/knappe_code/instruction_mem_16.vhd

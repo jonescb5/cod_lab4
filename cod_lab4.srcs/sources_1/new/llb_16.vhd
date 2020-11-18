@@ -33,20 +33,29 @@ library xil_defaultlib;
 --use UNISIM.VComponents.all;
 
 entity llb_16 is
-	Port (	input	: in std_logic_vector(15 downto 0);
+	Port (	a_bus	: in std_logic_vector(15 downto 0);
+			b_bus	: in std_logic_vector(15 downto 0);
 			output	: out std_logic_vector(15 downto 0) );
 end llb_16;
 
 architecture Structural of llb_16 is
 signal constandsig :  std_logic_vector(15 downto 0);
+signal byte_sig : std_logic_vector(15 downto 0);
 begin
 
 constandsig <= x"00FF";
 
 ANDY_BOI		:	ENTITY xil_defaultlib.and_16(Structural)
 							PORT MAP(
-									a_bus		=>	input,
+									a_bus		=>	b_bus,
 									b_bus		=>	constandsig,
+									c_bus		=>	byte_sig
+									);
+									
+ORI_BOI			:	ENTITY xil_defaultlib.or_16(Structural)
+							PORT MAP(
+									a_bus		=>	a_bus,
+									b_bus		=>	byte_sig,
 									c_bus		=>	output
 									);
 

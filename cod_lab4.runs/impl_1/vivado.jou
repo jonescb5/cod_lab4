@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Nov 18 18:00:29 2020
+# Process ID: 86368
+# Current directory: /home/chrispy/workspace/cod_lab4/cod_lab4.runs/impl_1
+# Command line: vivado -log processor_toplevel.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source processor_toplevel.tcl -notrace
+# Log file: /home/chrispy/workspace/cod_lab4/cod_lab4.runs/impl_1/processor_toplevel.vdi
+# Journal file: /home/chrispy/workspace/cod_lab4/cod_lab4.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source processor_toplevel.tcl -notrace

@@ -50,11 +50,18 @@ signal pc_current : std_logic_vector(15 downto 0);
 signal pc_next : std_logic_vector(15 downto 0);
 signal pc_incremented : std_logic_vector(15 downto 0);
 signal pc_to_pc : std_logic_vector(15 downto 0);
+signal branch_addr : std_logic_vector(15 downto 0);
 
      
 begin
 
 --pc_pass <= pc_current;
+
+SHIFT_BRANCH_ADDR : ENTITY xil_defaultlib.sll_16(Structural)
+	PORT MAP(
+			a_bus		=>	branch_pc,
+			c_bus		=>	branch_addr
+			);
 
 Instruction_memory : ENTITY knappe_lib.instruction_mem_16(Behavioral)
     port map(
@@ -73,7 +80,7 @@ PC_MUX : ENTITY knappe_lib.PC_mux(Behavioral)
     port map(
              zero_flag => Zero_flag,
              branch_flag => branch_flag,
-             branch_pc => branch_pc,
+             branch_pc => branch_addr,
              inc_pc => pc_incremented,
              output_pc  => PC_next 
             );

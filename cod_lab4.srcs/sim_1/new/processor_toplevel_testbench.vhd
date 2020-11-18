@@ -37,7 +37,7 @@ entity processor_toplevel_testbench is
 end processor_toplevel_testbench;
 
 architecture Behavioral of processor_toplevel_testbench is
-constant clock_period : time := 4 ns;
+constant clock_period : time := 1 ns;
 signal SIM_clk_in 			:  	STD_logic := '1';
 
 signal SIM_set_pc 			:  	std_logic_vector(15 downto 0) := "0000000000000000";

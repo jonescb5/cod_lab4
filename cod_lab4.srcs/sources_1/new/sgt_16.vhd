@@ -47,9 +47,9 @@ b_int <= to_integer(signed(b_bus));
 process(a_int, b_int)
 begin
 	if(a_int > b_int) then
-		c_bus <= X"0001";
-	else
 		c_bus <= X"0000";
+	else
+		c_bus <= X"0001";
 	end if;
 end process;
 

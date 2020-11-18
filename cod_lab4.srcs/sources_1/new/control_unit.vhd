@@ -49,7 +49,7 @@ begin
 ALUFunc(3) <= OpCode(0);
 ALUFunc(2 downto 0) <= Func;
 
-  control : process(opcode)
+  control : process(opcode,ALUFunc)
   begin
     case opcode is
     --R1 type instructions
@@ -192,7 +192,7 @@ ALUFunc(2 downto 0) <= Func;
 	when "1100" =>
 	    RegDst			<= "01";
         MemRead			<= '0';
-        ALUsrc			<= '1';
+        ALUsrc			<= '0';
         RegWriteEn		<= '0';
         MemtoReg		<= '0';
         MemWrite		<= '0';

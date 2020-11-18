@@ -171,7 +171,8 @@ begin
 									
 	LLB_BLOCK				:	ENTITY xil_defaultlib.llb_16(Structural)
 							PORT MAP(
-									input		=>	B,
+									a_bus		=>	A,
+									b_bus		=>	B,
 									output		=>	res_llb_block
 									);
 									

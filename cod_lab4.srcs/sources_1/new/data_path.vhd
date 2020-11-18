@@ -48,7 +48,7 @@ entity data_path is
 			
 			OpCode			: out std_logic_vector(3 downto 0);
 			Func			: out std_logic_vector(2 downto 0);
-			sign_extend_imm : out std_logic_vector(15 downto 0);
+			extimm6			: out std_logic_vector(15 downto 0);
 			Zero			: out std_logic;
 			Overflow		: out std_logic;
 			Carry_Out		: out std_logic
@@ -84,7 +84,6 @@ signal instruction_sig : std_logic_vector(15 downto 0);
 signal rs_addr_sig : std_logic_vector(2 downto 0);
 signal rt_addr_sig : std_logic_vector(2 downto 0);
 signal rd_addr_sig : std_logic_vector(2 downto 0);
-signal func_sig : std_logic_vector(2 downto 0);
 signal imm6_sig : std_logic_vector(5 downto 0);
 signal imm9_sig : std_logic_vector(8 downto 0);
 
@@ -99,6 +98,9 @@ begin
 	Func <= instruction_sig(2 downto 0);
 	imm6_sig <= instruction_sig(5 downto 0);
 	imm9_sig <= instruction_sig(8 downto 0);
+	
+	extimm6(15 downto 6) <= (others => '0');
+	extimm6(5 downto 0) <= imm6_sig(5 downto 0);
 	
 	
 	ALU : ENTITY xil_defaultlib.ALU16_16(Structural)
@@ -161,7 +163,7 @@ begin
 				SEsel	=> SEsel,
 				seimm16	=> sign_extend_sig
 		);
-		sign_extend_imm <= sign_extend_sig;
+
 			
 	REG_WRITE_ADDR_SEL : entity xil_defaultlib.mux3to1_3(Behavioral)
 		port map(

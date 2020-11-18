@@ -60,7 +60,7 @@ end data_path_wpc;
 architecture Structural of data_path_wpc is
 signal instruction_sig : std_logic_vector(15 downto 0);
 signal zero_flag_sig : std_logic;
-signal seimm16_sig : std_logic_vector(15 downto 0);
+signal extimm6_sig : std_logic_vector(15 downto 0);
 begin
 
 	DATA_PATH :	ENTITY xil_defaultlib.data_path(Structural)
@@ -79,7 +79,7 @@ begin
 			
 				OpCode			=> OpCode,
 				Func			=> Func,
-				sign_extend_imm => seimm16_sig,
+				extimm6 		=> extimm6_sig,
 				Zero			=> zero_flag_sig,
 				Overflow		=> Overflow,
 				Carry_Out		=> Carry_Out
@@ -93,7 +93,7 @@ begin
 				branch_flag		=>	Branch,
 				zero_flag		=>	zero_flag_sig,
 				instruction		=>	instruction_sig,
-				branch_pc		=>	seimm16_sig,
+				branch_pc		=>	extimm6_sig,
 				pc_init			=>	pc_init,
 				set_pc			=>	set_pc
 				--pc_pass			=>	pc_pass

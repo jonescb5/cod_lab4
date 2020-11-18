@@ -1,5 +1,11 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/seq_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'seq_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sgt_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sgt_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/slt_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'slt_16'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ALU16_16'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'data_path'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path_wpc.vhd" into library xil_defaultlib
