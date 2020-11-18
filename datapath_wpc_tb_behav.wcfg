@@ -10,19 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="9085fs"></ZoomEndTime>
-      <Cursor1Time time="2431fs"></Cursor1Time>
+      <ZoomStartTime time="139314fs"></ZoomStartTime>
+      <ZoomEndTime time="211515fs"></ZoomEndTime>
+      <Cursor1Time time="72150fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="231"></NameColumnWidth>
-      <ValueColumnWidth column_width="184"></ValueColumnWidth>
+      <ValueColumnWidth column_width="129"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="13" />
-   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_clk_in">
-      <obj_property name="ElementShortName">SIM_clk_in</obj_property>
-      <obj_property name="ObjectShortName">SIM_clk_in</obj_property>
-   </wvobject>
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_pc_init">
       <obj_property name="ElementShortName">SIM_pc_init</obj_property>
       <obj_property name="ObjectShortName">SIM_pc_init</obj_property>
@@ -34,6 +30,14 @@
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_Carry_Out">
       <obj_property name="ElementShortName">SIM_Carry_Out</obj_property>
       <obj_property name="ObjectShortName">SIM_Carry_Out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_clk_in">
+      <obj_property name="ElementShortName">SIM_clk_in</obj_property>
+      <obj_property name="ObjectShortName">SIM_clk_in</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/PC_LOOP/pc_current">
+      <obj_property name="ElementShortName">pc_current[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_current[15:0]</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group46">
       <obj_property name="label">CONTROL_UNIT</obj_property>
@@ -114,14 +118,9 @@
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/PC_LOOP/pc_current">
-      <obj_property name="ElementShortName">pc_current[15:0]</obj_property>
-      <obj_property name="ObjectShortName">pc_current[15:0]</obj_property>
-   </wvobject>
    <wvobject type="group" fp_name="group39">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU/A">
          <obj_property name="ElementShortName">A[15:0]</obj_property>
          <obj_property name="ObjectShortName">A[15:0]</obj_property>
@@ -247,6 +246,7 @@
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/RAM">
          <obj_property name="ElementShortName">RAM[0:255][15:0]</obj_property>
          <obj_property name="ObjectShortName">RAM[0:255][15:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

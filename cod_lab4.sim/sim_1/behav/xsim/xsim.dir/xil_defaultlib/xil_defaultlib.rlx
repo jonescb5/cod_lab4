@@ -31,7 +31,7 @@ Nov  6 2019
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/not_16.vhd,1604352390,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd,,,not_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/or_16.vhd,1604277647,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd,,,or_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/processor_toplevel.vhd,1605654292,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/processor_toplevel_testbench.vhd,,,processor_toplevel,,,,,,,,
-/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd,1605671386,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd,,,registerfile_16by8,,,,,,,,
+/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/registerfile_16by8.vhd,1605673621,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/data_path.vhd,,,registerfile_16by8,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/seq_16.vhd,1605637386,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd,,,seq_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sgt_16.vhd,1605637394,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd,,,sgt_16,,,,,,,,
 /home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/sll_16.vhd,1604352423,vhdl,/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sources_1/new/ALU16_16.vhd,,,sll_16,,,,,,,,

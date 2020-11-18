@@ -46,7 +46,8 @@ end registerfile_16by8;
 
 architecture Behavioral of registerfile_16by8 is
 type registers is array ( 0 to 7) of std_logic_vector(15 downto 0);
-signal reg_block : registers;
+signal reg_block : registers := ((others=> (others=>'0')));
+--signal reg_block : registers;
 
 begin
 
