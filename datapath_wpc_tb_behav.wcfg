@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="471fs"></ZoomStartTime>
-      <ZoomEndTime time="20425fs"></ZoomEndTime>
-      <Cursor1Time time="20000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9085fs"></ZoomEndTime>
+      <Cursor1Time time="2431fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="231"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="184"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="13" />
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_clk_in">
       <obj_property name="ElementShortName">SIM_clk_in</obj_property>
       <obj_property name="ObjectShortName">SIM_clk_in</obj_property>
@@ -26,11 +26,6 @@
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_pc_init">
       <obj_property name="ElementShortName">SIM_pc_init</obj_property>
       <obj_property name="ObjectShortName">SIM_pc_init</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/processor_toplevel_testbench/SIM_pc">
-      <obj_property name="ElementShortName">SIM_pc[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SIM_pc[15:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_Overflow">
       <obj_property name="ElementShortName">SIM_Overflow</obj_property>
@@ -43,10 +38,9 @@
    <wvobject type="group" fp_name="group46">
       <obj_property name="label">CONTROL_UNIT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/RegDst">
-         <obj_property name="ElementShortName">RegDst</obj_property>
-         <obj_property name="ObjectShortName">RegDst</obj_property>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/RegDst">
+         <obj_property name="ElementShortName">RegDst[1:0]</obj_property>
+         <obj_property name="ObjectShortName">RegDst[1:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/MemRead">
          <obj_property name="ElementShortName">MemRead</obj_property>
@@ -68,10 +62,6 @@
          <obj_property name="ElementShortName">ALUOp[3:0]</obj_property>
          <obj_property name="ObjectShortName">ALUOp[3:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/ALUOpSel">
-         <obj_property name="ElementShortName">ALUOpSel</obj_property>
-         <obj_property name="ObjectShortName">ALUOpSel</obj_property>
-      </wvobject>
       <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/MemWrite">
          <obj_property name="ElementShortName">MemWrite</obj_property>
          <obj_property name="ObjectShortName">MemWrite</obj_property>
@@ -81,8 +71,9 @@
          <obj_property name="ObjectShortName">Branch</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/CONTROL_UNIT/OpCode">
-         <obj_property name="ElementShortName">OpCode[2:0]</obj_property>
-         <obj_property name="ObjectShortName">OpCode[2:0]</obj_property>
+         <obj_property name="ElementShortName">OpCode[3:0]</obj_property>
+         <obj_property name="ObjectShortName">OpCode[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group54">
@@ -92,14 +83,17 @@
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_addr_a">
          <obj_property name="ElementShortName">reg_addr_a[2:0]</obj_property>
          <obj_property name="ObjectShortName">reg_addr_a[2:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_addr_b">
          <obj_property name="ElementShortName">reg_addr_b[2:0]</obj_property>
          <obj_property name="ObjectShortName">reg_addr_b[2:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_addr_c">
          <obj_property name="ElementShortName">reg_addr_c[2:0]</obj_property>
          <obj_property name="ObjectShortName">reg_addr_c[2:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_data_a">
          <obj_property name="ElementShortName">reg_data_a[15:0]</obj_property>
@@ -112,11 +106,147 @@
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_data_write">
          <obj_property name="ElementShortName">reg_data_write[15:0]</obj_property>
          <obj_property name="ObjectShortName">reg_data_write[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/REGISTER_FILE/reg_block">
          <obj_property name="ElementShortName">reg_block[0:7][15:0]</obj_property>
          <obj_property name="ObjectShortName">reg_block[0:7][15:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/PC_LOOP/pc_current">
+      <obj_property name="ElementShortName">pc_current[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_current[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group39">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU/A">
+         <obj_property name="ElementShortName">A[15:0]</obj_property>
+         <obj_property name="ObjectShortName">A[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU/B">
+         <obj_property name="ElementShortName">B[15:0]</obj_property>
+         <obj_property name="ObjectShortName">B[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU/ctr">
+         <obj_property name="ElementShortName">ctr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ctr[4:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU/result">
+         <obj_property name="ElementShortName">result[15:0]</obj_property>
+         <obj_property name="ObjectShortName">result[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group46">
+      <obj_property name="label">SIGN_EXT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/imm6">
+         <obj_property name="ElementShortName">imm6[5:0]</obj_property>
+         <obj_property name="ObjectShortName">imm6[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/imm9">
+         <obj_property name="ElementShortName">imm9[8:0]</obj_property>
+         <obj_property name="ObjectShortName">imm9[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/SESel">
+         <obj_property name="ElementShortName">SESel</obj_property>
+         <obj_property name="ObjectShortName">SESel</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/seimm16">
+         <obj_property name="ElementShortName">seimm16[15:0]</obj_property>
+         <obj_property name="ObjectShortName">seimm16[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/seimm6">
+         <obj_property name="ElementShortName">seimm6[15:0]</obj_property>
+         <obj_property name="ObjectShortName">seimm6[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/SIGN_EXTEND/seimm9">
+         <obj_property name="ElementShortName">seimm9[15:0]</obj_property>
+         <obj_property name="ObjectShortName">seimm9[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group51">
+      <obj_property name="label">ALU_SRC_MUX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU_INPUT_SEL/a">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU_INPUT_SEL/b">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU_INPUT_SEL/sel">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/ALU_INPUT_SEL/pass">
+         <obj_property name="ElementShortName">pass[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pass[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group56">
+      <obj_property name="label">MEM_TO_REG</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/MEM_TO_REG_SEL/a">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/MEM_TO_REG_SEL/b">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/MEM_TO_REG_SEL/sel">
+         <obj_property name="ElementShortName">sel</obj_property>
+         <obj_property name="ObjectShortName">sel</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/MEM_TO_REG_SEL/pass">
+         <obj_property name="ElementShortName">pass[15:0]</obj_property>
+         <obj_property name="ObjectShortName">pass[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/reg_data_write_sig">
+      <obj_property name="ElementShortName">reg_data_write_sig[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_data_write_sig[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group159">
+      <obj_property name="label">DATA_MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/mem_access_addr">
+         <obj_property name="ElementShortName">mem_access_addr[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_access_addr[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/mem_write_data">
+         <obj_property name="ElementShortName">mem_write_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_write_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/mem_read_data">
+         <obj_property name="ElementShortName">mem_read_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_read_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/mem_read">
+         <obj_property name="ElementShortName">mem_read</obj_property>
+         <obj_property name="ObjectShortName">mem_read</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/mem_write">
+         <obj_property name="ElementShortName">mem_write</obj_property>
+         <obj_property name="ObjectShortName">mem_write</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/ram_addr">
+         <obj_property name="ElementShortName">ram_addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ram_addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/RAM">
+         <obj_property name="ElementShortName">RAM[0:255][15:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM[0:255][15:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

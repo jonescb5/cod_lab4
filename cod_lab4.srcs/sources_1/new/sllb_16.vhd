@@ -39,7 +39,7 @@ end sllb_16;
 architecture Structural of sllb_16 is
 
 begin
-	c_bus(0 to 7) <= x"00";
-	c_bus(8 to 15) <= a_bus(0 to 7);
+	c_bus(7 downto 0) <= x"00";
+	c_bus(15 downto 8) <= a_bus(7 downto 0);
 
 end Structural;

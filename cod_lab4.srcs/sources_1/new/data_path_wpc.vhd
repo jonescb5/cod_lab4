@@ -38,19 +38,20 @@ port (
 			clk				:	in std_logic;
   			pc_init 		: 	in STD_LOGIC;
            	set_pc 			: 	in STD_LOGIC_Vector(15 downto 0);
-			RegDst			: 	in std_logic;
+			RegDst			: 	in std_logic_vector(1 downto 0);
 			MemRead			: 	in std_logic;
 			ALUsrc			: 	in std_logic;
 			RegWriteEn		: 	in std_logic;
 			MemtoReg		: 	in std_logic;
-			ALUctr			: 	in std_logic_vector(3 downto 0);
+			ALUctr			: 	in std_logic_vector(4 downto 0);
 			MemWrite		: 	in std_logic;
+			SEsel			:	in std_logic;
 			Branch			:	in std_logic;
-			OpCode			: 	out std_logic_vector(2 downto 0);
-			Func			: 	out std_logic_vector(3 downto 0);
+			OpCode			: 	out std_logic_vector(3 downto 0);
+			Func			: 	out std_logic_vector(2 downto 0);
 			Overflow		: out std_logic;
-			Carry_Out		: out std_logic;
-			pc_pass : out std_logic_vector(15 downto 0)
+			Carry_Out		: out std_logic
+			--pc_pass : out std_logic_vector(15 downto 0)
 			--RegRst			: in std_logic
    );
 end data_path_wpc;
@@ -74,6 +75,7 @@ begin
 				MemtoReg		=> MemtoReg,
 				ALUctr			=> ALUctr,
 				MemWrite		=> MemWrite,
+				SEsel			=> SEsel,
 			
 				OpCode			=> OpCode,
 				Func			=> Func,
@@ -93,8 +95,8 @@ begin
 				instruction		=>	instruction_sig,
 				branch_pc		=>	seimm16_sig,
 				pc_init			=>	pc_init,
-				set_pc			=>	set_pc,
-				pc_pass			=>	pc_pass
+				set_pc			=>	set_pc
+				--pc_pass			=>	pc_pass
 				);
 	
 end Structural;

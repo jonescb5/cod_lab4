@@ -44,9 +44,10 @@ entity data_path is
 			MemtoReg		: in std_logic;
 			ALUctr			: in std_logic_vector(4 downto 0);
 			MemWrite		: in std_logic;
+			SEsel			: in std_logic;
 			
-			OpCode			: out std_logic_vector(2 downto 0);
-			Func			: out std_logic_vector(3 downto 0);
+			OpCode			: out std_logic_vector(3 downto 0);
+			Func			: out std_logic_vector(2 downto 0);
 			sign_extend_imm : out std_logic_vector(15 downto 0);
 			Zero			: out std_logic;
 			Overflow		: out std_logic;
@@ -59,12 +60,11 @@ end data_path;
 
 architecture Structural of data_path is
 signal alu_input_b_sig : std_logic_vector(15 downto 0);
-signal alu_input_a_sig : std_logic_vector(15 downto 0);
 signal alu_output_sig : std_logic_vector(15 downto 0);
 
 
 --signal clk_sig : std_logic;
-signal reg_addr_a_sig : std_logic_vector(2 downto 0);
+
 signal reg_addr_b_sig : std_logic_vector(2 downto 0);
 signal reg_addr_write_sig : std_logic_vector(2 downto 0);
 signal reg_data_a_sig : std_logic_vector(15 downto 0);
@@ -84,7 +84,7 @@ signal instruction_sig : std_logic_vector(15 downto 0);
 signal rs_addr_sig : std_logic_vector(2 downto 0);
 signal rt_addr_sig : std_logic_vector(2 downto 0);
 signal rd_addr_sig : std_logic_vector(2 downto 0);
-signal func_sig : std_logic_vector(3 downto 0);
+signal func_sig : std_logic_vector(2 downto 0);
 signal imm6_sig : std_logic_vector(5 downto 0);
 signal imm9_sig : std_logic_vector(8 downto 0);
 
@@ -149,23 +149,24 @@ begin
 				a		=> alu_output_sig,
 				b		=> mem_read_data_sig,
 				sel		=> memtoReg,
-				pass	=> memtoReg_data_sig
+				pass	=> reg_data_write_sig
 				);
 	
-	reg_data_write_sig <= memtoReg_data_sig;
 	
---	SIGN_EXTEND : entity xil_defaultlib.sign_extentor(Behavioral)
---		port map(
---				i_in 	=>	imm7_sig,
---				i_out	=> 	sign_extend_sig
---				);
-				
---				sign_extend_imm <= sign_extend_sig;
+
+	SIGN_EXTEND : entity xil_defaultlib.dual_sign_extend(Structural)
+		port map(
+				imm6	=> imm6_sig,
+				imm9	=> imm9_sig,
+				SEsel	=> SEsel,
+				seimm16	=> sign_extend_sig
+		);
+		sign_extend_imm <= sign_extend_sig;
 			
 	REG_WRITE_ADDR_SEL : entity xil_defaultlib.mux3to1_3(Behavioral)
 		port map(
-				a		=> rt_addr_sig,
-				b		=> rd_addr_sig,
+				a		=> rd_addr_sig,
+				b		=> rt_addr_sig,
 				c		=> rs_addr_sig,
 				sel		=> RegDst,
 				pass	=> reg_addr_write_sig

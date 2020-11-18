@@ -56,7 +56,7 @@ end Mux16to1_16;
 architecture Behavioral of Mux16to1_16 is
 
 begin
-	selector : process(sel)
+	selector : process(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,sel)
 		begin
 			case sel is
 				when "0000" =>

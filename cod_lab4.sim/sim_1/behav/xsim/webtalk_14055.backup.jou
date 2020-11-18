@@ -2,11 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Nov  9 18:05:34 2020
-# Process ID: 59128
+# Start of session at: Sun Nov 15 15:28:12 2020
+# Process ID: 14055
 # Current directory: /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/xsim.dir/datapath_wpc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/xsim.dir/slt_16_testbench_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/xsim.dir/datapath_wpc_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/behav/xsim/xsim.dir/slt_16_testbench_behav/webtalk/xsim_webtalk.tcl -notrace

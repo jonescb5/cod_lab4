@@ -30,10 +30,10 @@ begin
     ram_addr <= mem_access_addr(7 downto 0);
     process(clk)
     begin
-        if(rising_edge(clk)) then 
+        --if(rising_edge(clk)) then 
             if( mem_write = '1') then
                 RAM(to_integer(unsigned(ram_addr))) <= mem_write_data;
-            end if;
+          --  end if;
         end if;
     end process;
     mem_read_data <= RAM(to_integer(unsigned(ram_addr))) when (mem_read = '1') else x"0000";

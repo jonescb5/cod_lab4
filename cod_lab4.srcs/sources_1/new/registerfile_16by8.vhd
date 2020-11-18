@@ -64,7 +64,7 @@ begin
 		
 --end process reset_proc;
 --write_proc : process(clk)
-	write_proc : process(reg_addr_c)
+	write_proc : process(reg_addr_c, reg_data_write)
 		begin
 			--if (rising_edge(clk)) then
 				if (reg_write_enable = '1') then
@@ -90,8 +90,9 @@ begin
 			--end if;
 		end process write_proc;	
 				
-	read_a_proc : process(clk)
+	read_a_proc : process(clk, reg_addr_a)
 		begin
+				--if (rising_edge(clk)) then
 					case reg_addr_a is
 						when "001" =>
 							reg_data_a <= reg_block(1);
@@ -110,11 +111,12 @@ begin
 						when others =>
 							reg_data_a <= "0000000000000000";
 					end case;
-					
+				--end if;
 		end process read_a_proc;
 		
-	read_b_proc : process(clk)
+	read_b_proc : process(clk, reg_addr_b)
 		begin
+				--if (rising_edge(clk)) then
 					case reg_addr_b is
 						when "001" =>
 							reg_data_b <= reg_block(1);
@@ -133,6 +135,6 @@ begin
 						when others =>
 							reg_data_b <= "0000000000000000";
 					end case;
-					
+				--end if;
 		end process read_b_proc;	
 end Behavioral;

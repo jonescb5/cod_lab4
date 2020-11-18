@@ -1,7 +1,48 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L knappe_lib -L secureip --snapshot slt_16_testbench_behav xil_defaultlib.slt_16_testbench -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 02b5322fde53492e8ead4750ed1019bb --incr --debug typical --relax --mt 8 -L xil_defaultlib -L knappe_lib -L secureip --snapshot processor_toplevel_testbench_behav xil_defaultlib.processor_toplevel_testbench -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture structural of entity xil_defaultlib.full_adder [full_adder_default]
+Compiling architecture structural of entity xil_defaultlib.adder_16 [adder_16_default]
+Compiling architecture structural of entity xil_defaultlib.adder_subtractor_16 [adder_subtractor_16_default]
+Compiling architecture structural of entity xil_defaultlib.and_16 [and_16_default]
+Compiling architecture structural of entity xil_defaultlib.or_16 [or_16_default]
+Compiling architecture structural of entity xil_defaultlib.xor_16 [xor_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.slt_16 [slt_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.sgt_16 [sgt_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.seq_16 [seq_16_default]
+Compiling architecture structural of entity xil_defaultlib.not_16 [not_16_default]
+Compiling architecture structural of entity xil_defaultlib.sll_16 [sll_16_default]
+Compiling architecture structural of entity xil_defaultlib.srl_16 [srl_16_default]
+Compiling architecture structural of entity xil_defaultlib.sra_16 [sra_16_default]
+Compiling architecture structural of entity xil_defaultlib.sllb_16 [sllb_16_default]
+Compiling architecture structural of entity xil_defaultlib.srlb_16 [srlb_16_default]
+Compiling architecture structural of entity xil_defaultlib.llb_16 [llb_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux16to1_16 [mux16to1_16_default]
+Compiling architecture structural of entity xil_defaultlib.zero_check_16 [zero_check_16_default]
+Compiling architecture structural of entity xil_defaultlib.ALU16_16 [alu16_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.registerfile_16by8 [registerfile_16by8_default]
+Compiling architecture behavioral of entity xil_defaultlib.mem_16 [mem_16_default]
+Compiling architecture behavioral of entity xil_defaultlib.mux2to1_16 [mux2to1_16_default]
+Compiling architecture structural of entity xil_defaultlib.dual_sign_extend [dual_sign_extend_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux3to1_3 [mux3to1_3_default]
+Compiling architecture structural of entity xil_defaultlib.data_path [data_path_default]
+Compiling architecture behavioral of entity knappe_lib.instruction_mem_16 [instruction_mem_16_default]
+Compiling architecture behavioral of entity knappe_lib.PC [pc_default]
+Compiling architecture behavioral of entity knappe_lib.PC_mux [pc_mux_default]
+Compiling architecture behavioral of entity knappe_lib.PC_adder [pc_adder_default]
+Compiling architecture behavioral of entity knappe_lib.PC_topleve [pc_topleve_default]
+Compiling architecture structural of entity xil_defaultlib.data_path_wpc [data_path_wpc_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_unit [control_unit_default]
+Compiling architecture structural of entity xil_defaultlib.processor_toplevel [processor_toplevel_default]
+Compiling architecture behavioral of entity xil_defaultlib.processor_toplevel_testbench
+Built simulation snapshot processor_toplevel_testbench_behav

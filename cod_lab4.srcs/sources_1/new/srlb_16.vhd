@@ -39,14 +39,8 @@ end srlb_16;
 architecture Structural of srlb_16 is
 
 begin
-	c_bus(0) <= a_bus(8);
-	c_bus(1) <= a_bus(9);
-	c_bus(2) <= a_bus(10);
-	c_bus(3) <= a_bus(11);
-	c_bus(4) <= a_bus(12);
-	c_bus(5) <= a_bus(13);
-	c_bus(6) <= a_bus(14);
-	c_bus(7) <= a_bus(15);
-	c_bus(8 to 15) <= x"00";
+	c_bus(7 downto 0) <= a_bus(15 downto 8);
+	c_bus(15 downto 8) <= x"00";
+
 
 end Structural;
