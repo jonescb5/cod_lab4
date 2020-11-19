@@ -57,7 +57,7 @@ begin
 	SIM_clk_in <= not SIM_clk_in after clock_period / 2;
 end process clock;
 
-SIM_pc_init <= '0' after 5 ns;
+SIM_pc_init <= '0' after 1 ns;
 --SIM_RegRst	<= '1' after 1 ns, '0' after 1.5 ns;
 
 DUT : ENTITY xil_defaultlib.processor_toplevel(Structural)

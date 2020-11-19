@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -47,27 +47,15 @@ end registerfile_16by8;
 architecture Behavioral of registerfile_16by8 is
 type registers is array ( 0 to 7) of std_logic_vector(15 downto 0);
 signal reg_block : registers := ((others=> (others=>'0')));
---signal reg_block : registers;
+
 
 begin
 
 
---reset_proc : process(reg_reset)
---	begin
---		reg_block(0) <= "0000000000000000";
---		reg_block(1) <= "0000000000000001";
---		reg_block(2) <= "0000000000000010";	
---		reg_block(3) <= "0000000000000011";
---		reg_block(4) <= "0000000000000100";
---		reg_block(5) <= "0000000000000101";
---		reg_block(6) <= "0000000000000110";
---		reg_block(7) <= "0000000000000111";
-		
---end process reset_proc;
---write_proc : process(clk)
-	write_proc : process(reg_addr_c, reg_data_write)
+	--write_proc : process(reg_addr_c, reg_data_write)
+	write_proc : process(clk)
 		begin
-			--if (rising_edge(clk)) then
+			if (rising_edge(clk)) then
 				if (reg_write_enable = '1') then
 					case reg_addr_c is
 						when "001" =>
@@ -88,54 +76,57 @@ begin
 							reg_block(0) <= "0000000000000000";
 					end case;
 				end if;
-			--end if;
+			end if;
 		end process write_proc;	
-				
-	read_a_proc : process(reg_addr_a)
-		begin
-				--if (rising_edge(clk)) then
-					case reg_addr_a is
-						when "001" =>
-							reg_data_a <= reg_block(1);
-						when "010" =>
-							reg_data_a <= reg_block(2);	
-						when "011" =>
-							reg_data_a <= reg_block(3);
-						when "100" =>
-							reg_data_a <= reg_block(4);
-						when "101" =>
-							reg_data_a <= reg_block(5);
-						when "110" =>
-							reg_data_a <= reg_block(6);
-						when "111" =>
-							reg_data_a <= reg_block(7);
-						when others =>
-							reg_data_a <= "0000000000000000";
-					end case;
-				--end if;
-		end process read_a_proc;
 		
-	read_b_proc : process(reg_addr_b)
-		begin
-				--if (rising_edge(clk)) then
-					case reg_addr_b is
-						when "001" =>
-							reg_data_b <= reg_block(1);
-						when "010" =>
-							reg_data_b <= reg_block(2);	
-						when "011" =>
-							reg_data_b <= reg_block(3);
-						when "100" =>
-							reg_data_b <= reg_block(4);
-						when "101" =>
-							reg_data_b <= reg_block(5);
-						when "110" =>
-							reg_data_b <= reg_block(6);
-						when "111" =>
-							reg_data_b <= reg_block(7);
-						when others =>
-							reg_data_b <= "0000000000000000";
-					end case;
-				--end if;
-		end process read_b_proc;	
+reg_data_a <= x"0000" when reg_addr_a = "000" else reg_block(to_integer(unsigned(reg_addr_a)));
+reg_data_b <= x"0000" when reg_addr_b = "000" else reg_block(to_integer(unsigned(reg_addr_b)));
+				
+--	read_a_proc : process(reg_addr_a,reg_addr_b)
+--		begin
+--				--if (rising_edge(clk)) then
+--					case reg_addr_a is
+--						when "001" =>
+--							reg_data_a <= reg_block(1);
+--						when "010" =>
+--							reg_data_a <= reg_block(2);	
+--						when "011" =>
+--							reg_data_a <= reg_block(3);
+--						when "100" =>
+--							reg_data_a <= reg_block(4);
+--						when "101" =>
+--							reg_data_a <= reg_block(5);
+--						when "110" =>
+--							reg_data_a <= reg_block(6);
+--						when "111" =>
+--							reg_data_a <= reg_block(7);
+--						when others =>
+--							reg_data_a <= "0000000000000000";
+--					end case;
+--				--end if;
+--		end process read_a_proc;
+		
+--	read_b_proc : process(reg_addr_b,reg_addr_a)
+--		begin
+--				--if (rising_edge(clk)) then
+--					case reg_addr_b is
+--						when "001" =>
+--							reg_data_b <= reg_block(1);
+--						when "010" =>
+--							reg_data_b <= reg_block(2);	
+--						when "011" =>
+--							reg_data_b <= reg_block(3);
+--						when "100" =>
+--							reg_data_b <= reg_block(4);
+--						when "101" =>
+--							reg_data_b <= reg_block(5);
+--						when "110" =>
+--							reg_data_b <= reg_block(6);
+--						when "111" =>
+--							reg_data_b <= reg_block(7);
+--						when others =>
+--							reg_data_b <= "0000000000000000";
+--					end case;
+--				--end if;
+--		end process read_b_proc;	
 end Behavioral;

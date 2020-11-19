@@ -24,16 +24,37 @@ end mem_16;
 architecture Behavioral of mem_16 is
     type data_mem is array (0 to 255) of std_logic_vector (15 downto 0);
     signal ram_addr : std_logic_vector(7 downto 0);
-    signal RAM : data_mem := ((others=> (others=>'0')));
+    signal RAM : data_mem := (	x"0000",
+    							x"0000",
+    							x"0000",
+    							x"0000",--Mem(3)
+    							x"0000",
+    							x"0000",
+    							x"0000",
+    							x"0000",--Mem(7)
+    							x"0000",
+    							x"0000",
+    							x"0000",
+    							x"0000",--Mem(11)
+    							x"0000",
+    							x"0000",
+    							x"0000",
+    							x"0000",--Mem(15)
+    							x"0101",
+    							x"0110",
+    							x"0011",
+    							x"00F0",--Mem(19)
+    							x"00FF",
+    							others=> (others=>'0'));
 begin
     
     ram_addr <= mem_access_addr(7 downto 0);
     process(clk)
     begin
-        --if(rising_edge(clk)) then 
+        if(rising_edge(clk)) then 
             if( mem_write = '1') then
                 RAM(to_integer(unsigned(ram_addr))) <= mem_write_data;
-          --  end if;
+        	end if;
         end if;
     end process;
     mem_read_data <= RAM(to_integer(unsigned(ram_addr))) when (mem_read = '1') else x"0000";
