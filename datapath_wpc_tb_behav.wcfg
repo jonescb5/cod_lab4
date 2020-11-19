@@ -10,26 +10,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="150433fs"></ZoomStartTime>
-      <ZoomEndTime time="156384fs"></ZoomEndTime>
+      <ZoomStartTime time="29532fs"></ZoomStartTime>
+      <ZoomEndTime time="37589fs"></ZoomEndTime>
       <Cursor1Time time="155000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="230"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
-   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_pc_init">
-      <obj_property name="ElementShortName">SIM_pc_init</obj_property>
-      <obj_property name="ObjectShortName">SIM_pc_init</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_Overflow">
-      <obj_property name="ElementShortName">SIM_Overflow</obj_property>
-      <obj_property name="ObjectShortName">SIM_Overflow</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_Carry_Out">
-      <obj_property name="ElementShortName">SIM_Carry_Out</obj_property>
-      <obj_property name="ObjectShortName">SIM_Carry_Out</obj_property>
+   <WVObjectSize size="13" />
+   <wvobject type="other" fp_name="/processor_toplevel_testbench/clk_count">
+      <obj_property name="ElementShortName">clk_count</obj_property>
+      <obj_property name="ObjectShortName">clk_count</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_clk_in">
       <obj_property name="ElementShortName">SIM_clk_in</obj_property>
@@ -200,7 +192,6 @@
       <wvobject type="group" fp_name="group1907">
          <obj_property name="label">register_mem</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/RAM[0]">
             <obj_property name="ElementShortName">[0][15:0]</obj_property>
             <obj_property name="ObjectShortName">[0][15:0]</obj_property>
@@ -237,7 +228,6 @@
       <wvobject type="group" fp_name="group1901">
          <obj_property name="label">prog_mem</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/processor_toplevel_testbench/DUT/DATA_PATH/DATA_PATH/DATA_MEMORY/RAM[16]">
             <obj_property name="ElementShortName">[16][15:0]</obj_property>
             <obj_property name="ObjectShortName">[16][15:0]</obj_property>

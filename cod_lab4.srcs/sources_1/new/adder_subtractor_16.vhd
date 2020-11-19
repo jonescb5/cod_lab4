@@ -35,8 +35,6 @@ entity adder_subtractor_16 is
 	Port (	a_bus   : in std_logic_vector(15 downto 0);
             b_bus   : in std_logic_vector(15 downto 0);
             sel     : in std_logic;
-            cout    : out std_logic;
-            overflow	: out std_logic;
             d_bus   : out std_logic_vector(15 downto 0) );
 end adder_subtractor_16;
 
@@ -55,8 +53,6 @@ begin
 						PORT MAP( 	a_bus => a_bus,
 									b_bus => b_bus_mod,
 									cin => sel,
-									cout => cout,
-									overflow => overflow,
 									s_bus => d_bus
 									);
 

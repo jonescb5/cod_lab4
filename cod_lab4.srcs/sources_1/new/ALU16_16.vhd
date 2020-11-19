@@ -38,8 +38,6 @@ entity ALU16_16 is
 			B			:	in std_logic_vector(15 downto 0);
 			ctr			:	in std_logic_vector(4 downto 0);
 			result		:	out std_logic_vector(15 downto 0);
-			overflow	:	out std_logic;
-			carry_out	:	out std_logic;
 			zero		:	out std_logic
 			);
 end ALU16_16;
@@ -72,8 +70,6 @@ begin
 									a_bus		=>	A,
 									b_bus		=>	B,
 									sel			=>	ctr(4),
-									cout		=>	carry_out,
-									overflow	=>	overflow,
 									d_bus		=>	res_add_sub_block
 									);
 									

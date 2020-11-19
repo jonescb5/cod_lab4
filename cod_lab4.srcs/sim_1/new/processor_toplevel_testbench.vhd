@@ -41,16 +41,23 @@ constant clock_period : time := 1 ns;
 signal SIM_clk_in 			:  	STD_logic := '1';
 
 signal SIM_set_pc 			:  	std_logic_vector(15 downto 0) := "0000000000000000";
-signal SIM_pc_init 			:  	std_logic := '1';
+signal SIM_pc_init 			:  	std_logic := '0';
 --signal SIM_pc 				:	 std_logic_vector(15 downto 0);
 signal SIM_Overflow			:  	std_logic;
 signal SIM_Carry_Out		:  	std_logic;
+signal clk_count	: integer := 0;
 --
 --signal SIM_RegRst			:	std_logic:= '0';
 
 
 begin
 
+clock_counter : process(SIM_clk_in)
+begin
+	if(rising_edge(sim_clk_in)) then
+		clk_count <= clk_count + 1;
+	end if;
+end process clock_counter;
 
 clock : process(SIM_clk_in)
 begin
@@ -64,12 +71,7 @@ DUT : ENTITY xil_defaultlib.processor_toplevel(Structural)
 	PORT MAP(
 			clk_in		=>	SIM_clk_in,
 			pc_init_in	=>	SIM_pc_init,
-			set_pc_in	=>	SIM_set_pc,
-			Overflow	=>	SIM_Overflow,
-			Carry_Out	=>	SIM_Carry_Out
-		--	pc			=>	SIM_pc    ------- get rid of this
-			
-			--RegRst		=> SIM_RegRst
+			set_pc_in	=>	SIM_set_pc
 			);
 
 end Behavioral;

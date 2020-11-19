@@ -49,21 +49,13 @@ entity data_path is
 			OpCode			: out std_logic_vector(3 downto 0);
 			Func			: out std_logic_vector(2 downto 0);
 			extimm6			: out std_logic_vector(15 downto 0);
-			Zero			: out std_logic;
-			Overflow		: out std_logic;
-			Carry_Out		: out std_logic
-			
-			--RegRst			: in std_logic
-
+			Zero			: out std_logic
 			);
 end data_path;
 
 architecture Structural of data_path is
 signal alu_input_b_sig : std_logic_vector(15 downto 0);
 signal alu_output_sig : std_logic_vector(15 downto 0);
-
-
---signal clk_sig : std_logic;
 
 signal reg_addr_b_sig : std_logic_vector(2 downto 0);
 signal reg_addr_write_sig : std_logic_vector(2 downto 0);
@@ -109,8 +101,6 @@ begin
 				B			=>	alu_input_b_sig,
 				ctr			=>	ALUctr,
 				result		=>	alu_output_sig,
-				overflow	=>	Overflow,
-				carry_out	=>	Carry_Out,
 				zero		=>	Zero
 				);
 				
@@ -124,7 +114,6 @@ begin
 				reg_data_b		=>	reg_data_b_sig,
 				reg_data_write	=>	reg_data_write_sig,
 				reg_write_enable=>	RegWriteEn
-				--reg_reset		=> 	RegRst
 				);
 				
 				

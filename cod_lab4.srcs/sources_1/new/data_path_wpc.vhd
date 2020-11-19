@@ -48,11 +48,7 @@ port (
 			SEsel			:	in std_logic;
 			Branch			:	in std_logic;
 			OpCode			: 	out std_logic_vector(3 downto 0);
-			Func			: 	out std_logic_vector(2 downto 0);
-			Overflow		: out std_logic;
-			Carry_Out		: out std_logic
-			--pc_pass : out std_logic_vector(15 downto 0)
-			--RegRst			: in std_logic
+			Func			: 	out std_logic_vector(2 downto 0)
    );
 end data_path_wpc;
 
@@ -80,11 +76,7 @@ begin
 				OpCode			=> OpCode,
 				Func			=> Func,
 				extimm6 		=> extimm6_sig,
-				Zero			=> zero_flag_sig,
-				Overflow		=> Overflow,
-				Carry_Out		=> Carry_Out
-				
-				--RegRst			=> RegRst
+				Zero			=> zero_flag_sig
 				);
 				
 	PC_LOOP : ENTITY knappe_lib.pc_topleve(Behavioral)
@@ -96,7 +88,6 @@ begin
 				branch_pc		=>	extimm6_sig,
 				pc_init			=>	pc_init,
 				set_pc			=>	set_pc
-				--pc_pass			=>	pc_pass
 				);
 	
 end Structural;
