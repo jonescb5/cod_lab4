@@ -48,7 +48,7 @@ architecture Behavioral of mem_16 is
     							others=> (others=>'0'));
 begin
     
-    ram_addr <= mem_access_addr(8 downto 1);
+    ram_addr <= mem_access_addr(7 downto 0);
     process(clk)
     begin
         if(rising_edge(clk)) then 
