@@ -10,15 +10,23 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="29532fs"></ZoomStartTime>
-      <ZoomEndTime time="37589fs"></ZoomEndTime>
-      <Cursor1Time time="155000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="11017fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="230"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="15" />
+   <wvobject type="logic" fp_name="/processor_toplevel_testbench/SIM_reset">
+      <obj_property name="ElementShortName">SIM_reset</obj_property>
+      <obj_property name="ObjectShortName">SIM_reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/processor_toplevel_testbench/SIM_PC">
+      <obj_property name="ElementShortName">SIM_PC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SIM_PC[15:0]</obj_property>
+   </wvobject>
    <wvobject type="other" fp_name="/processor_toplevel_testbench/clk_count">
       <obj_property name="ElementShortName">clk_count</obj_property>
       <obj_property name="ObjectShortName">clk_count</obj_property>

@@ -36,8 +36,6 @@ library knappe_lib;
 entity data_path_wpc is 
 port (	
 			clk				:	in std_logic;
-  			pc_init 		: 	in STD_LOGIC;
-           	set_pc 			: 	in STD_LOGIC_Vector(15 downto 0);
 			RegDst			: 	in std_logic_vector(1 downto 0);
 			MemRead			: 	in std_logic;
 			ALUsrc			: 	in std_logic;
@@ -48,7 +46,13 @@ port (
 			SEsel			:	in std_logic;
 			Branch			:	in std_logic;
 			OpCode			: 	out std_logic_vector(3 downto 0);
-			Func			: 	out std_logic_vector(2 downto 0)
+			Func			: 	out std_logic_vector(2 downto 0);
+			reset			:	in std_logic;
+			pc_pass			: 	out std_logic_vector(15 downto 0);
+			reg_contents	: 	out std_logic_vector(127 downto 0);
+			mem_disp_access_addr : in STD_LOGIC_VECTOR (7 downto 0);
+			mem_disp_data :  out std_logic_vector(15 downto 0);
+			instruction : out std_logic_vector(15 downto 0)
    );
 end data_path_wpc;
 
@@ -58,6 +62,8 @@ signal instruction_sig : std_logic_vector(15 downto 0);
 signal zero_flag_sig : std_logic;
 signal extimm6_sig : std_logic_vector(15 downto 0);
 begin
+
+	instruction <= instruction_sig;
 
 	DATA_PATH :	ENTITY xil_defaultlib.data_path(Structural)
 		port map(
@@ -76,7 +82,12 @@ begin
 				OpCode			=> OpCode,
 				Func			=> Func,
 				extimm6 		=> extimm6_sig,
-				Zero			=> zero_flag_sig
+				Zero			=> zero_flag_sig,
+				
+				reset			=> reset,
+				reg_contents	=>	reg_contents,
+				mem_disp_access_addr => mem_disp_access_addr,
+           		mem_disp_data => mem_disp_data
 				);
 				
 	PC_LOOP : ENTITY knappe_lib.pc_topleve(Behavioral)
@@ -86,8 +97,8 @@ begin
 				zero_flag		=>	zero_flag_sig,
 				instruction		=>	instruction_sig,
 				branch_pc		=>	extimm6_sig,
-				pc_init			=>	pc_init,
-				set_pc			=>	set_pc
+				reset			=> 	reset,
+				pc_pass			=>	pc_pass
 				);
 	
 end Structural;

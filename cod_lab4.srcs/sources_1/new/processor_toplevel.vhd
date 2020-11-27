@@ -34,10 +34,13 @@ library xil_defaultlib;
 
 entity processor_toplevel is
 	Port (		clk_in		: in std_logic;
-				pc_init_in		: in std_logic;
-				set_pc_in		: in std_logic_vector(15 downto 0)
-				
-				 );
+				reset		: in std_logic;
+				PC			: out std_logic_vector(15 downto 0);
+				reg_contents	: out std_logic_vector(127 downto 0);
+				mem_disp_access_addr : in STD_LOGIC_VECTOR (7 downto 0);
+				mem_disp_data :  out std_logic_vector(15 downto 0);
+				instruction : out std_logic_vector(15 downto 0)
+				);
 end processor_toplevel;
 
 architecture Structural of processor_toplevel is
@@ -53,15 +56,16 @@ signal OpCode_sig : std_logic_vector(3 downto 0);
 signal Func_sig : std_logic_vector(2 downto 0);
 
 signal SEsel_sig	: std_logic;
+signal prog_rst		: std_logic;
+signal rst_sig		: std_logic;
 
 begin
 
+rst_sig <= prog_rst or reset;
 
 DATA_PATH : entity xil_defaultlib.data_path_wpc(Structural)
 		Port map(	
 				clk				=>	clk_in,
-				pc_init			=>	pc_init_in,
-				set_pc			=>	set_pc_in,
 				RegDst			=>	RegDst_sig,
 				MemRead			=>	MemRead_sig,
 				ALUsrc			=>	ALUsrc_sig,
@@ -72,7 +76,13 @@ DATA_PATH : entity xil_defaultlib.data_path_wpc(Structural)
 				SEsel			=>	SEsel_sig,
 				Branch			=>	Branch_sig,
 				OpCode			=>	OpCode_sig,
-				Func			=>	Func_sig
+				Func			=>	Func_sig,
+				reset			=> 	rst_sig,
+				pc_pass			=>	PC,
+				reg_contents	=>	reg_contents,
+				mem_disp_access_addr => mem_disp_access_addr,
+           		mem_disp_data 	=> 	mem_disp_data,
+           		instruction		=>	instruction
 			);
 			
 CONTROL_UNIT : ENTITY xil_defaultlib.control_unit(Behavioral)
@@ -87,7 +97,8 @@ CONTROL_UNIT : ENTITY xil_defaultlib.control_unit(Behavioral)
         		MemWrite		=>	MemWrite_sig,
         		Branch			=>	Branch_sig,
         		OpCode			=>	OpCode_sig,
-        		Func			=>	Func_sig
+        		Func			=>	Func_sig,
+        		prog_rst		=>	prog_rst
 				);
 
 end Structural;

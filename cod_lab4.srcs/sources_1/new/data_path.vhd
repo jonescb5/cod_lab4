@@ -49,7 +49,14 @@ entity data_path is
 			OpCode			: out std_logic_vector(3 downto 0);
 			Func			: out std_logic_vector(2 downto 0);
 			extimm6			: out std_logic_vector(15 downto 0);
-			Zero			: out std_logic
+			Zero			: out std_logic;
+			
+			reset			: in std_logic;
+			
+			reg_contents	: out std_logic_vector(127 downto 0);
+			
+			mem_disp_access_addr : in STD_LOGIC_VECTOR (7 downto 0);
+			mem_disp_data :  out std_logic_vector(15 downto 0)
 			);
 end data_path;
 
@@ -113,7 +120,9 @@ begin
 				reg_data_a		=>	reg_data_a_sig,
 				reg_data_b		=>	reg_data_b_sig,
 				reg_data_write	=>	reg_data_write_sig,
-				reg_write_enable=>	RegWriteEn
+				reg_write_enable=>	RegWriteEn,
+				reset			=>	reset,
+				reg_contents	=>	reg_contents
 				);
 				
 				
@@ -124,7 +133,10 @@ begin
            		mem_write_data		=> reg_data_b_sig,
            		mem_read_data 		=> mem_read_data_sig,
            		mem_read			=> MemRead, 
-           		mem_write			=> MemWrite
+           		mem_write			=> MemWrite,
+           		mem_disp_access_addr => mem_disp_access_addr,
+           		mem_disp_data => mem_disp_data,
+           		reset	=> reset
            		);
            		
 	ALU_INPUT_SEL : entity xil_defaultlib.mux2to1_16(Behavioral)

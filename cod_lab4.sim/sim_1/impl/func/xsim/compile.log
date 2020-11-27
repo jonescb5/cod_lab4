@@ -1,0 +1,22 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.sim/sim_1/impl/func/xsim/processor_toplevel_testbench_func_impl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PC'
+INFO: [VRFC 10-3107] analyzing entity 'clock_divider'
+INFO: [VRFC 10-3107] analyzing entity '\clock_divider__parameterized0\'
+INFO: [VRFC 10-3107] analyzing entity 'display_driver'
+INFO: [VRFC 10-3107] analyzing entity 'mem_16'
+INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8'
+INFO: [VRFC 10-3107] analyzing entity 'seq_16'
+INFO: [VRFC 10-3107] analyzing entity 'sgt_16'
+INFO: [VRFC 10-3107] analyzing entity 'slt_16'
+INFO: [VRFC 10-3107] analyzing entity 'ALU16_16'
+INFO: [VRFC 10-3107] analyzing entity 'PC_topleve'
+INFO: [VRFC 10-3107] analyzing entity 'data_path'
+INFO: [VRFC 10-3107] analyzing entity 'data_path_wpc'
+INFO: [VRFC 10-3107] analyzing entity 'processor_toplevel'
+INFO: [VRFC 10-3107] analyzing entity 'processor_board_implementation'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'registerfile_16by8_testbench'
+ERROR: [VRFC 10-719] formal port/generic <clk> is not declared in <registerfile_16by8> [/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd:65]
+ERROR: [VRFC 10-3353] formal port 'alusrc_sig' has no actual or default value [/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd:63]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd:39]
+INFO: [VRFC 10-3070] VHDL file '/home/chrispy/workspace/cod_lab4/cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd' ignored due to errors

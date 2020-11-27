@@ -39,8 +39,10 @@ entity registerfile_16by8 is
 			reg_data_a		:	out std_logic_vector(15 downto 0);
 			reg_data_b		:	out std_logic_vector(15 downto 0);
 			reg_data_write	:	in std_logic_vector(15 downto 0);
-			reg_write_enable:	in std_logic
-			--reg_reset		:	in std_logic
+			reg_write_enable:	in std_logic;
+			reset			:	in std_logic;
+			
+			reg_contents	:	out std_logic_vector(127 downto 0)		
 			);
 end registerfile_16by8;
 
@@ -50,12 +52,22 @@ signal reg_block : registers := ((others=> (others=>'0')));
 
 
 begin
+	
+	reg_contents(15 downto 0)	<=	reg_block(0);
+	reg_contents(31 downto 16)	<=	reg_block(1);
+	reg_contents(47 downto 32)	<=	reg_block(2);
+	reg_contents(63 downto 48)	<=	reg_block(3);
+	reg_contents(79 downto 64)	<=	reg_block(4);
+	reg_contents(95 downto 80)	<=	reg_block(5);
+	reg_contents(111 downto 96)	<=	reg_block(6);
+	reg_contents(127 downto 112)	<=	reg_block(7);
 
 
-	--write_proc : process(reg_addr_c, reg_data_write)
 	write_proc : process(clk)
 		begin
-			if (rising_edge(clk)) then
+			if (reset = '1') then
+				reg_block <= ((others=>(others=>'0')));
+			elsif (rising_edge(clk)) then
 				if (reg_write_enable = '1') then
 					case reg_addr_c is
 						when "001" =>
@@ -82,51 +94,5 @@ begin
 reg_data_a <= x"0000" when reg_addr_a = "000" else reg_block(to_integer(unsigned(reg_addr_a)));
 reg_data_b <= x"0000" when reg_addr_b = "000" else reg_block(to_integer(unsigned(reg_addr_b)));
 				
---	read_a_proc : process(reg_addr_a,reg_addr_b)
---		begin
---				--if (rising_edge(clk)) then
---					case reg_addr_a is
---						when "001" =>
---							reg_data_a <= reg_block(1);
---						when "010" =>
---							reg_data_a <= reg_block(2);	
---						when "011" =>
---							reg_data_a <= reg_block(3);
---						when "100" =>
---							reg_data_a <= reg_block(4);
---						when "101" =>
---							reg_data_a <= reg_block(5);
---						when "110" =>
---							reg_data_a <= reg_block(6);
---						when "111" =>
---							reg_data_a <= reg_block(7);
---						when others =>
---							reg_data_a <= "0000000000000000";
---					end case;
---				--end if;
---		end process read_a_proc;
-		
---	read_b_proc : process(reg_addr_b,reg_addr_a)
---		begin
---				--if (rising_edge(clk)) then
---					case reg_addr_b is
---						when "001" =>
---							reg_data_b <= reg_block(1);
---						when "010" =>
---							reg_data_b <= reg_block(2);	
---						when "011" =>
---							reg_data_b <= reg_block(3);
---						when "100" =>
---							reg_data_b <= reg_block(4);
---						when "101" =>
---							reg_data_b <= reg_block(5);
---						when "110" =>
---							reg_data_b <= reg_block(6);
---						when "111" =>
---							reg_data_b <= reg_block(7);
---						when others =>
---							reg_data_b <= "0000000000000000";
---					end case;
---				--end if;
---		end process read_b_proc;	
+	
 end Behavioral;

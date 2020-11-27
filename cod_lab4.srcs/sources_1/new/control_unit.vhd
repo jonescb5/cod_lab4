@@ -35,7 +35,8 @@ port (
         MemWrite		: 	out std_logic;
         Branch			:	out std_logic;
         OpCode			: 	in std_logic_vector(3 downto 0);
-        Func			:	in std_logic_vector(2 downto 0)
+        Func			:	in std_logic_vector(2 downto 0);
+        prog_rst		:	out std_logic
         );
 
 end control_unit;
@@ -63,6 +64,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= ALUFunc;
+        prog_rst <= '0';
         
     --R2 type instructions    
 	when "0001" =>
@@ -75,6 +77,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= ALUFunc;
+        prog_rst <= '0';
         
         --addi
 	when "0010" =>
@@ -87,6 +90,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0000";
+        prog_rst <= '0';
         
 	when "0011" =>
 	    RegDst			<= "01";
@@ -98,6 +102,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0001";
+        prog_rst <= '0';
         
 	when "0100" =>
 	    RegDst			<= "01";
@@ -109,6 +114,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0010";
+        prog_rst <= '0';
         
 	when "0101" =>
 	    RegDst			<= "01";
@@ -120,6 +126,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0011";
+        prog_rst <= '0';
         
 	when "0110" =>
 	    RegDst			<= "01";
@@ -131,6 +138,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0100";
+        prog_rst <= '0';
         
 	when "0111" =>
 	    RegDst			<= "01";
@@ -142,6 +150,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0101";
+        prog_rst <= '0';
         
 	when "1000" =>
 	    RegDst			<= "01";
@@ -153,6 +162,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0110";
+        prog_rst <= '0';
         
 	when "1001" =>
 	    RegDst			<= "01";
@@ -164,6 +174,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0111";
+        prog_rst <= '0';
         
   	-- lw
 	when "1010" =>
@@ -176,6 +187,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0000";
+        prog_rst <= '0';
         
     --     
 	when "1011" =>
@@ -188,6 +200,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0000";
+        prog_rst <= '0';
         
 	when "1100" =>
 	    RegDst			<= "01";
@@ -199,6 +212,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '1';
         SEsel			<= '0';
         ALUOp <= "0001";
+        prog_rst <= '0';
         
 	when "1101" =>
 	    RegDst			<= "10";
@@ -210,6 +224,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '1';
         ALUOp <= "1110";
+        prog_rst <= '0';
         
 	when "1110" =>
 	    RegDst			<= "10";
@@ -221,6 +236,19 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '1';
         ALUOp <= "1111";
+        prog_rst <= '0';
+        
+--	when "1111" =>
+--	    RegDst			<= "00";
+--        MemRead			<= '0';
+--        ALUsrc			<= '0';
+--        RegWriteEn		<= '0';
+--        MemtoReg		<= '0';
+--        MemWrite		<= '0';
+--        Branch			<= '0';
+--        SEsel			<= '0';
+--        ALUOp <= "0000";
+--        prog_rst <= '1';
         
 	when others =>
 		RegDst			<= "00";
@@ -232,6 +260,7 @@ ALUFunc(2 downto 0) <= Func;
         Branch			<= '0';
         SEsel			<= '0';
         ALUOp <= "0000";
+        prog_rst <= '0';
 	end case;
 
       end process control;

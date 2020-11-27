@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"processor_toplevel_testbench_func_impl.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/registerfile_16by8_testbench.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/ALU_16_testbench.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/zero_check_16_testbench.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/data_path_testbench.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/datapath_wpc_tb.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/processor_toplevel_testbench.vhd" \
+"../../../../../cod_lab4.srcs/sim_1/new/slt_16_testbench.vhd" \
+
+# Do not sort compile order
+nosort

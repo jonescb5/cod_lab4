@@ -40,17 +40,20 @@ architecture Behavioral of processor_toplevel_testbench is
 constant clock_period : time := 1 ns;
 signal SIM_clk_in 			:  	STD_logic := '1';
 
-signal SIM_set_pc 			:  	std_logic_vector(15 downto 0) := "0000000000000000";
-signal SIM_pc_init 			:  	std_logic := '0';
+--signal SIM_set_pc 			:  	std_logic_vector(15 downto 0) := "0000000000000000";
+--signal SIM_pc_init 			:  	std_logic := '0';
 --signal SIM_pc 				:	 std_logic_vector(15 downto 0);
 signal SIM_Overflow			:  	std_logic;
 signal SIM_Carry_Out		:  	std_logic;
 signal clk_count	: integer := 0;
+signal SIM_reset	: std_logic:='0';
+signal SIM_PC	: std_logic_vector(15 downto 0);
 --
 --signal SIM_RegRst			:	std_logic:= '0';
 
 
 begin
+SIM_reset <= '1' after 10 ns, '0' after 11 ns;
 
 clock_counter : process(SIM_clk_in)
 begin
@@ -64,14 +67,16 @@ begin
 	SIM_clk_in <= not SIM_clk_in after clock_period / 2;
 end process clock;
 
-SIM_pc_init <= '0' after 1 ns;
+--SIM_pc_init <= '0' after 1 ns;
 --SIM_RegRst	<= '1' after 1 ns, '0' after 1.5 ns;
 
 DUT : ENTITY xil_defaultlib.processor_toplevel(Structural)
 	PORT MAP(
 			clk_in		=>	SIM_clk_in,
-			pc_init_in	=>	SIM_pc_init,
-			set_pc_in	=>	SIM_set_pc
+--			pc_init_in	=>	SIM_pc_init,
+--			set_pc_in	=>	SIM_set_pc
+			reset		=>	SIM_reset,
+			PC			=>	SIM_PC
 			);
 
 end Behavioral;

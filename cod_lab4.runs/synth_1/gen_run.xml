@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1605829305">
-  <File Type="VDS-TIMING-PB" Name="processor_toplevel_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="processor_toplevel_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="processor_toplevel.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="processor_toplevel_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="processor_toplevel_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="processor_toplevel_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="processor_toplevel.vds"/>
-  <File Type="REPORTS-TCL" Name="processor_toplevel_reports.tcl"/>
-  <File Type="PA-TCL" Name="processor_toplevel.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1606510099">
+  <File Type="VDS-TIMING-PB" Name="processor_board_implementation_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="processor_board_implementation_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="processor_board_implementation.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="processor_board_implementation_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="processor_board_implementation_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="processor_board_implementation_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="processor_board_implementation.vds"/>
+  <File Type="REPORTS-TCL" Name="processor_board_implementation_reports.tcl"/>
+  <File Type="PA-TCL" Name="processor_board_implementation.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/full_adder.vhd">
@@ -73,7 +73,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Mux8to1_16.vhd">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -263,9 +262,33 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/basys3_7segment_hex_driver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Basys3_16bitSingleCycleProcessor_Toplevel.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux2to1_std_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="processor_toplevel"/>
+      <Option Name="TopModule" Val="processor_board_implementation"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

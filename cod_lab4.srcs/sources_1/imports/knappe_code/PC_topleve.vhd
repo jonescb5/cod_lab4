@@ -38,10 +38,11 @@ entity PC_topleve is
            zero_flag : in STD_LOGIC;
            branch_pc : in STD_LOGIC_Vector(15 downto 0);
            Instruction : out STD_LOGIC_VECTOR(15 downto 0);
-           pc_init : in STD_LOGIC;
-           set_pc : in STD_LOGIC_Vector(15 downto 0)
+           --pc_init : in STD_LOGIC;
+           --set_pc : in STD_LOGIC_Vector(15 downto 0);
            
-           --pc_pass : out STD_LOGIC_Vector(15 downto 0)
+           reset	: in STD_LOGIC;
+           pc_pass : out STD_LOGIC_Vector(15 downto 0)
            );
 end PC_topleve;
 
@@ -55,7 +56,7 @@ signal branch_addr : std_logic_vector(15 downto 0);
      
 begin
 
---pc_pass <= pc_current;
+pc_pass <= pc_current;
 
 SHIFT_BRANCH_ADDR : ENTITY xil_defaultlib.sll_16(Structural)
 	PORT MAP(
@@ -72,7 +73,8 @@ Instruction_memory : ENTITY knappe_lib.instruction_mem_16(Behavioral)
 PC : ENTITY knappe_lib.PC(Behavioral)
     port map(
             clk => clk,
-            PC_in => pc_to_pc,
+            PC_in => pc_next,
+            reset => reset,
             PC_out => pc_current
             );
             
@@ -91,13 +93,13 @@ PC_ADDER : ENTITY knappe_lib.PC_adder(Behavioral)
             PC_out => pc_incremented
             );
             
-PC_SET : ENTITY xil_defaultlib.mux2to1_16(Behavioral)
-	port map(
-			a	=>	pc_next,
-			b	=> 	set_pc,
-			sel =>	pc_init,
-			pass=>	pc_to_pc
-			);
+--PC_SET : ENTITY xil_defaultlib.mux2to1_16(Behavioral)
+--	port map(
+--			a	=>	pc_next,
+--			b	=> 	set_pc,
+--			sel =>	pc_init,
+--			pass=>	pc_to_pc
+--			);
             
                             
 end Behavioral;

@@ -6,4 +6,4 @@
 # Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log processor_toplevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source processor_toplevel.tcl -notrace
+vivado -log processor_board_implementation.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source processor_board_implementation.tcl -notrace
